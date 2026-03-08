@@ -176,39 +176,42 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     /* You may add any custom species below this point based on the following structure: */
 
-    /*
-    [SPECIES_NONE] =
+
+    [SPECIES_DEMIFIEND] =
     {
-        .baseHP        = 1,
-        .baseAttack    = 1,
-        .baseDefense   = 1,
-        .baseSpeed     = 1,
-        .baseSpAttack  = 1,
-        .baseSpDefense = 1,
-        .types = MON_TYPES(TYPE_MYSTERY),
-        .catchRate = 255,
-        .expYield = 67,
-        .evYield_HP = 1,
-        .evYield_Defense = 1,
-        .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .baseHP        = 207,
+        .baseAttack    = 170,
+        .baseDefense   = 130,
+        .baseSpeed     = 140,
+        .baseSpAttack  = 160,
+        .baseSpDefense = 130,
+        .types = MON_TYPES(TYPE_DARK, TYPE_GHOST),
+        .catchRate = 0,
+        .expYield = 666,
+        .evYield_HP = 2,
+        .evYield_Attack = 2,
+        .evYield_SpAttack = 2,
+        .genderRatio = MON_GENDERLESS,
         .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
+        .friendship = 0,
+        .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_NONE, ABILITY_CURSED_BODY, ABILITY_DAMP },
+        .abilities = { ABILITY_WONDER_GUARD, ABILITY_NONE, ABILITY_NONE },
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
+        .isMythical = TRUE,
+        .isFrontierBanned = TRUE,
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("??????????"),
+        .speciesName = _("Demi-fiend"),
         .cryId = CRY_NONE,
-        .natDexNum = NATIONAL_DEX_NONE,
-        .categoryName = _("Unknown"),
-        .height = 0,
-        .weight = 0,
+        .natDexNum = NATIONAL_DEX_DEMIFIEND,
+        .categoryName = _("True Demon"),
+        .height = 17,
+        .weight = 680,
         .description = COMPOUND_STRING(
-            "This is a newly discovered Pokémon.\n"
-            "It is currently under investigation.\n"
-            "No detailed information is available\n"
-            "at this time."),
+            "A human turned demon through the power\n"
+            "of the Magatama. A Fiend of chaos,\n"
+            "he is considered the strongest demon\n"
+            "in Lucifer's army."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -216,36 +219,25 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_CircledQuestionMark,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_None,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_CircledQuestionMark,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 7,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_CircledQuestionMark,
-        .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
-        .backPicFemale = gMonBackPic_CircledQuestionMarkF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
-        .paletteFemale = gMonPalette_CircledQuestionMarkF,
-        .shinyPaletteFemale = gMonShinyPalette_CircledQuestionMarkF,
-        .iconSpriteFemale = gMonIcon_QuestionMarkF,
         .iconPalIndexFemale = 1,
-#endif //P_GENDER_DIFFERENCES
         .backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_CircledQuestionMark,
         .shinyPalette = gMonShinyPalette_CircledQuestionMark,
         .iconSprite = gMonIcon_QuestionMark,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sNoneLevelUpLearnset,
+        .levelUpLearnset = sDemifiendLevelUpLearnset,
         .teachableLearnset = sNoneTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
-                                {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
         //.formSpeciesIdTable = sNoneFormSpeciesIdTable,
         //.formChangeTable = sNoneFormChangeTable,
         //.perfectIVCount = NUM_STATS,
     },
-    */
+
 };
 
 const struct EggData gEggDatas[EGG_ID_COUNT] =

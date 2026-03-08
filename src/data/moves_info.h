@@ -21399,6 +21399,117 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
 
+    [MOVE_CHAOTIC_WILL] =
+    {
+        .name = COMPOUND_STRING("Chaotic Will"),
+        .description = COMPOUND_STRING(
+            "The dark will of the King\n"
+            "of Chaos. Guaranteed instakill."),
+        .effect = EFFECT_OHKO,
+        .power = 1,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 3,
+        .target = TARGET_BOTH,
+        .priority = 3,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_FeintAttack,
+    },    
+
+    [MOVE_RED_CAPOTE] =
+    {
+        .name = COMPOUND_STRING("Red Capote"),
+        .description = COMPOUND_STRING(
+            "Waves around a capote to\n"
+            "sharply raise evasiveness."),
+        .effect = EFFECT_MINIMIZE,
+        .power = 0,
+        .type = TYPE_FLYING,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .snatchAffected = TRUE,
+        .battleAnimScript = gBattleAnimMove_DoubleTeam,
+    },
+
+    [MOVE_MEDITATION] =
+    {
+        .name = COMPOUND_STRING("Meditation"),
+        .description = COMPOUND_STRING(
+            "The stillness of a monk.\n"
+            "Absorbs half the damage dealt."),
+        .effect = EFFECT_ABSORB,
+        .power = 130,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_GigaDrain,
+    },    
+
+    [MOVE_FREIKUGEL] =
+    {
+        .name = COMPOUND_STRING("Freikugel"),
+        .description = COMPOUND_STRING(
+            "Almighty? Well, close enough.\n"
+            "High critical-hit ratio."),
+        .effect = EFFECT_HIT,
+        .power = 150,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = FALSE,
+        .battleAnimScript = gBattleAnimMove_ChargeBeam,
+    }, 
+
+    [MOVE_DEADLY_FURY] =
+    {
+        .name = COMPOUND_STRING("Deadly Fury"),
+        .description = COMPOUND_STRING(
+            "The fury of a Fiend.\n"
+            "Always deals critical damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .alwaysCriticalHit = TRUE,
+        .battleAnimScript = gBattleAnimMove_CloseCombat,
+    }, 
+
+    [MOVE_GAEA_RAGE] =
+    {
+        .name = COMPOUND_STRING("Gaea Rage"),
+        .description = COMPOUND_STRING(
+            "Penultimate strength unleashed.\n"
+            "Can hit Flying Types."),
+        .effect = EFFECT_HIT,
+        .power = 255,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .damagesAirborne = TRUE,
+        .ignoreTypeIfFlyingAndUngrounded = TRUE,
+        .battleAnimScript = gBattleAnimMove_Fissure,
+    },    
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

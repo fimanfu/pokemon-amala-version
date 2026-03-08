@@ -906,8 +906,15 @@ enum __attribute__((packed)) Move
     MOVES_COUNT_GEN9,
 
     // Add any custom moves here, not further down!
+    MOVE_CHAOTIC_WILL = 848,
+    MOVE_RED_CAPOTE = 849,
+    MOVE_MEDITATION = 850,
+    MOVE_FREIKUGEL = 851,
+    MOVE_DEADLY_FURY = 852,
+    MOVE_GAEA_RAGE = 853,
+    MOVES_COUNT_MEGATEN,
 
-    MOVES_COUNT = MOVES_COUNT_GEN9,
+    MOVES_COUNT = MOVES_COUNT_MEGATEN,
 
     // Z Moves
     FIRST_Z_MOVE = MOVES_COUNT,

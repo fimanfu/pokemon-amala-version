@@ -1687,8 +1687,10 @@
 #define SPECIES_TATSUGIRI_DROOPY_MEGA                   1570
 #define SPECIES_TATSUGIRI_STRETCHY_MEGA                 1571
 #define SPECIES_GLIMMORA_MEGA                           1572
+// Megaten
+#define SPECIES_DEMIFIEND                               1573
 
-#define SPECIES_EGG                                     (SPECIES_GLIMMORA_MEGA + 1)
+#define SPECIES_EGG                                     (SPECIES_DEMIFIEND + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 
