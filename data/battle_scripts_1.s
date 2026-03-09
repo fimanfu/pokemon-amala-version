@@ -8255,3 +8255,10 @@ BattleScript_SilphScopeUnveiled::
 	printstring STRINGID_GHOSTWASMAROWAK
 	waitmessage B_WAIT_TIME_LONG
 	end2
+
+BattleScript_MagatamaActivates::
+	pause B_WAIT_TIME_SHORTEST
+	call BattleScript_AbilityPopUpScripting
+	printstring STRINGID_MAGATAMAACTIVE
+	waitmessage B_WAIT_TIME_LONG
+	return

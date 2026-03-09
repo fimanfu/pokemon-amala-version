@@ -9333,6 +9333,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/DamatraVillage_House1/border.bin",
       "blockdata_filepath": "data/layouts/DamatraVillage_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORYTILES_TEST_MAP",
+      "name": "PorytilesTestMap_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
+      "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
     }
   ]
 }

@@ -325,9 +325,19 @@ static bool32 ShouldTeraShellDistortTypeMatchups(enum Move move, enum BattlerId 
      && !IsBattleMoveStatus(move)
      && abilityDef == ABILITY_TERA_SHELL)
         return TRUE;
-
     return FALSE;
 }
+
+static bool32 IsMagatamaActive(enum Move move, enum BattlerId battlerDef, enum Ability abilityDef)
+{
+    if (!gSpecialStatuses[battlerDef].distortedTypeMatchups
+     && gBattleMons[battlerDef].species == SPECIES_DEMIFIEND
+     && !IsBattleMoveStatus(move)
+     && abilityDef == ABILITY_MAGATAMA)
+        return TRUE;
+    return FALSE;
+}
+
 
 bool32 IsUnnerveBlocked(enum BattlerId battler, enum Item itemId)
 {
@@ -4917,7 +4927,8 @@ bool32 IsMoldBreakerTypeAbility(enum BattlerId battler, enum Ability ability)
     if (ability == ABILITY_MOLD_BREAKER
      || ability == ABILITY_TERAVOLT
      || ability == ABILITY_TURBOBLAZE
-     || (ability == ABILITY_MYCELIUM_MIGHT && IsBattleMoveStatus(gCurrentMove)))
+     || (ability == ABILITY_MYCELIUM_MIGHT && IsBattleMoveStatus(gCurrentMove))
+     || ability == ABILITY_MAGATAMA)
     {
         RecordAbilityBattle(battler, ability);
         return TRUE;
@@ -8239,6 +8250,11 @@ static inline void MulByTypeEffectiveness(struct BattleContext *ctx, uq4_12_t *m
             gSpecialStatuses[ctx->battlerDef].distortedTypeMatchups = TRUE;
             gSpecialStatuses[ctx->battlerDef].teraShellAbilityDone = TRUE;
         }
+    }
+
+    if (gSpecialStatuses[ctx->battlerDef].distortedTypeMatchups || (mod > UQ_4_12(0.0) && IsMagatamaActive(ctx->move, ctx->battlerDef, ctx->abilityDef)))
+    {
+        mod = UQ_4_12(0.5);
     }
 
     *modifier = uq4_12_multiply(*modifier, mod);

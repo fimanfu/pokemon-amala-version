@@ -877,6 +877,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNDISGUISEWASBUSTED]                = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s disguise was busted!"),
     [STRINGID_ZENMODETRIGGERED]                     = COMPOUND_STRING("{B_SCR_ABILITY} triggered!"),
     [STRINGID_ZENMODEENDED]                         = COMPOUND_STRING("{B_SCR_ABILITY} ended!"),
+    [STRINGID_MAGATAMAACTIVE]                       = COMPOUND_STRING("The Magatama changes all affinities to Resist! "),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
