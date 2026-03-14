@@ -14696,78 +14696,78 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #endif //P_FAMILY_RHYHORN
 
 #if P_FAMILY_CHANSEY
-#if P_GEN_4_CROSS_EVOS
-    [SPECIES_HAPPINY] =
-    {
-        .baseHP        = 100,
-        .baseAttack    = 5,
-        .baseDefense   = 5,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 15,
-        .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_NORMAL),
-        .catchRate = 130,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 110 : 255,
-        .evYield_HP = 1,
-        .itemRare = ITEM_OVAL_STONE,
-        .genderRatio = MON_FEMALE,
-        .eggCycles = 40,
-        .friendship = 140,
-        .growthRate = GROWTH_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_NATURAL_CURE, ABILITY_SERENE_GRACE, ABILITY_FRIEND_GUARD },
-        .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("Happiny"),
-        .cryId = CRY_HAPPINY,
-        .natDexNum = NATIONAL_DEX_HAPPINY,
-        .categoryName = _("Playhouse"),
-        .height = 6,
-        .weight = 244,
-        .description = COMPOUND_STRING(
-            "It carries a round white rock in its\n"
-            "belly pouch. If it gets along well with\n"
-            "someone, it will sometimes give that\n"
-            "person the rock."),
-        .pokemonScale = 422,
-        .pokemonOffset = 15,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Happiny,
-        .frontPicSize = MON_COORDS_SIZE(32, 48),
-        .frontPicYOffset = 12,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 20),
-        ),
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
-        .backPic = gMonBackPic_Happiny,
-        .backPicSize = MON_COORDS_SIZE(48, 56),
-        .backPicYOffset = 9,
-        .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
-        .palette = gMonPalette_Happiny,
-        .shinyPalette = gMonShinyPalette_Happiny,
-        .iconSprite = gMonIcon_Happiny,
-        .iconPalIndex = 0,
-        .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
-        SHADOW(-1, 1, SHADOW_SIZE_S)
-        FOOTPRINT(Happiny)
-        OVERWORLD(
-            sPicTable_Happiny,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Happiny,
-            gShinyOverworldPalette_Happiny
-        )
-        .levelUpLearnset = sHappinyLevelUpLearnset,
-        .teachableLearnset = sHappinyTeachableLearnset,
-        .eggMoveLearnset = sHappinyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT},{IF_HOLD_ITEM, ITEM_OVAL_STONE})},
-                                {EVO_ITEM, ITEM_OVAL_STONE, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}),
-    },
-#endif //P_GEN_4_CROSS_EVOS
+// #if P_GEN_4_CROSS_EVOS
+//     [SPECIES_HAPPINY] =
+//     {
+//         .baseHP        = 100,
+//         .baseAttack    = 5,
+//         .baseDefense   = 5,
+//         .baseSpeed     = 30,
+//         .baseSpAttack  = 15,
+//         .baseSpDefense = 65,
+//         .types = MON_TYPES(TYPE_NORMAL),
+//         .catchRate = 130,
+//         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 110 : 255,
+//         .evYield_HP = 1,
+//         .itemRare = ITEM_OVAL_STONE,
+//         .genderRatio = MON_FEMALE,
+//         .eggCycles = 40,
+//         .friendship = 140,
+//         .growthRate = GROWTH_FAST,
+//         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+//         .abilities = { ABILITY_NATURAL_CURE, ABILITY_SERENE_GRACE, ABILITY_FRIEND_GUARD },
+//         .bodyColor = BODY_COLOR_PINK,
+//         .speciesName = _("Happiny"),
+//         .cryId = CRY_HAPPINY,
+//         .natDexNum = NATIONAL_DEX_HAPPINY,
+//         .categoryName = _("Playhouse"),
+//         .height = 6,
+//         .weight = 244,
+//         .description = COMPOUND_STRING(
+//             "It carries a round white rock in its\n"
+//             "belly pouch. If it gets along well with\n"
+//             "someone, it will sometimes give that\n"
+//             "person the rock."),
+//         .pokemonScale = 422,
+//         .pokemonOffset = 15,
+//         .trainerScale = 256,
+//         .trainerOffset = 0,
+//         .frontPic = gMonFrontPic_Happiny,
+//         .frontPicSize = MON_COORDS_SIZE(32, 48),
+//         .frontPicYOffset = 12,
+//         .frontAnimFrames = ANIM_FRAMES(
+//             ANIMCMD_FRAME(0, 30),
+//             ANIMCMD_FRAME(1, 30),
+//             ANIMCMD_FRAME(0, 20),
+//         ),
+//         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
+//         .backPic = gMonBackPic_Happiny,
+//         .backPicSize = MON_COORDS_SIZE(48, 56),
+//         .backPicYOffset = 9,
+//         .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
+//         .palette = gMonPalette_Happiny,
+//         .shinyPalette = gMonShinyPalette_Happiny,
+//         .iconSprite = gMonIcon_Happiny,
+//         .iconPalIndex = 0,
+//         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
+//         SHADOW(-1, 1, SHADOW_SIZE_S)
+//         FOOTPRINT(Happiny)
+//         OVERWORLD(
+//             sPicTable_Happiny,
+//             SIZE_32x32,
+//             SHADOW_SIZE_M,
+//             TRACKS_FOOT,
+//             sAnimTable_Following,
+//             gOverworldPalette_Happiny,
+//             gShinyOverworldPalette_Happiny
+//         )
+//         .levelUpLearnset = sHappinyLevelUpLearnset,
+//         .teachableLearnset = sHappinyTeachableLearnset,
+//         .eggMoveLearnset = sHappinyEggMoveLearnset,
+//         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT},{IF_HOLD_ITEM, ITEM_OVAL_STONE})},
+//                                 {EVO_ITEM, ITEM_OVAL_STONE, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}),
+//     },
+// #endif //P_GEN_4_CROSS_EVOS
 
     [SPECIES_CHANSEY] =
     {
@@ -14841,81 +14841,81 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     #endif
     },
 
-#if P_GEN_2_CROSS_EVOS
-    [SPECIES_BLISSEY] =
-    {
-        .baseHP        = 255,
-        .baseAttack    = 10,
-        .baseDefense   = 10,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 75,
-        .baseSpDefense = 135,
-        .types = MON_TYPES(TYPE_NORMAL),
-        .catchRate = 30,
-    #if P_UPDATED_EXP_YIELDS >= GEN_8
-        .expYield = 635,
-    #elif P_UPDATED_EXP_YIELDS >= GEN_5
-        .expYield = 608,
-    #else
-        .expYield = 255,
-    #endif
-        .evYield_HP = (P_UPDATED_EVS >= GEN_4) ? 3 : 2,
-        .itemCommon = ITEM_OVAL_STONE,
-        .genderRatio = MON_FEMALE,
-        .eggCycles = 40,
-        .friendship = 140,
-        .growthRate = GROWTH_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
-        .abilities = { ABILITY_NATURAL_CURE, ABILITY_SERENE_GRACE, ABILITY_HEALER },
-        .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("Blissey"),
-        .cryId = CRY_BLISSEY,
-        .natDexNum = NATIONAL_DEX_BLISSEY,
-        .categoryName = _("Happiness"),
-        .height = 15,
-        .weight = 468,
-        .description = COMPOUND_STRING(
-            "If it senses sadness with its fluffy fur,\n"
-            "a Blissey will rush over to the sad person,\n"
-            "however far away, to share an egg of\n"
-            "happiness that brings a smile to any face."),
-        .pokemonScale = 256,
-        .pokemonOffset = 4,
-        .trainerScale = 310,
-        .trainerOffset = 3,
-        .frontPic = gMonFrontPic_Blissey,
-        .frontPicSize = MON_COORDS_SIZE(56, 56),
-        .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 6 : 5,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 30),
-        ),
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Blissey,
-        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 40) : MON_COORDS_SIZE(64, 32),
-        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 13 : 16,
-        .backAnimId = BACK_ANIM_DIP_RIGHT_SIDE,
-        .palette = gMonPalette_Blissey,
-        .shinyPalette = gMonShinyPalette_Blissey,
-        .iconSprite = gMonIcon_Blissey,
-        .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 1 : 0,
-        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(1, 8, SHADOW_SIZE_L)
-        FOOTPRINT(Blissey)
-        OVERWORLD(
-            sPicTable_Blissey,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Blissey,
-            gShinyOverworldPalette_Blissey
-        )
-        .levelUpLearnset = sBlisseyLevelUpLearnset,
-        .teachableLearnset = sBlisseyTeachableLearnset,
-    },
-#endif //P_GEN_2_CROSS_EVOS
+// #if P_GEN_2_CROSS_EVOS
+//     [SPECIES_BLISSEY] =
+//     {
+//         .baseHP        = 255,
+//         .baseAttack    = 10,
+//         .baseDefense   = 10,
+//         .baseSpeed     = 55,
+//         .baseSpAttack  = 75,
+//         .baseSpDefense = 135,
+//         .types = MON_TYPES(TYPE_NORMAL),
+//         .catchRate = 30,
+//     #if P_UPDATED_EXP_YIELDS >= GEN_8
+//         .expYield = 635,
+//     #elif P_UPDATED_EXP_YIELDS >= GEN_5
+//         .expYield = 608,
+//     #else
+//         .expYield = 255,
+//     #endif
+//         .evYield_HP = (P_UPDATED_EVS >= GEN_4) ? 3 : 2,
+//         .itemCommon = ITEM_OVAL_STONE,
+//         .genderRatio = MON_FEMALE,
+//         .eggCycles = 40,
+//         .friendship = 140,
+//         .growthRate = GROWTH_FAST,
+//         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
+//         .abilities = { ABILITY_NATURAL_CURE, ABILITY_SERENE_GRACE, ABILITY_HEALER },
+//         .bodyColor = BODY_COLOR_PINK,
+//         .speciesName = _("Blissey"),
+//         .cryId = CRY_BLISSEY,
+//         .natDexNum = NATIONAL_DEX_BLISSEY,
+//         .categoryName = _("Happiness"),
+//         .height = 15,
+//         .weight = 468,
+//         .description = COMPOUND_STRING(
+//             "If it senses sadness with its fluffy fur,\n"
+//             "a Blissey will rush over to the sad person,\n"
+//             "however far away, to share an egg of\n"
+//             "happiness that brings a smile to any face."),
+//         .pokemonScale = 256,
+//         .pokemonOffset = 4,
+//         .trainerScale = 310,
+//         .trainerOffset = 3,
+//         .frontPic = gMonFrontPic_Blissey,
+//         .frontPicSize = MON_COORDS_SIZE(56, 56),
+//         .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 6 : 5,
+//         .frontAnimFrames = ANIM_FRAMES(
+//             ANIMCMD_FRAME(0, 30),
+//             ANIMCMD_FRAME(1, 30),
+//             ANIMCMD_FRAME(0, 30),
+//         ),
+//         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+//         .backPic = gMonBackPic_Blissey,
+//         .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 40) : MON_COORDS_SIZE(64, 32),
+//         .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 13 : 16,
+//         .backAnimId = BACK_ANIM_DIP_RIGHT_SIDE,
+//         .palette = gMonPalette_Blissey,
+//         .shinyPalette = gMonShinyPalette_Blissey,
+//         .iconSprite = gMonIcon_Blissey,
+//         .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 1 : 0,
+//         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+//         SHADOW(1, 8, SHADOW_SIZE_L)
+//         FOOTPRINT(Blissey)
+//         OVERWORLD(
+//             sPicTable_Blissey,
+//             SIZE_32x32,
+//             SHADOW_SIZE_M,
+//             TRACKS_FOOT,
+//             sAnimTable_Following,
+//             gOverworldPalette_Blissey,
+//             gShinyOverworldPalette_Blissey
+//         )
+//         .levelUpLearnset = sBlisseyLevelUpLearnset,
+//         .teachableLearnset = sBlisseyTeachableLearnset,
+//     },
+// #endif //P_GEN_2_CROSS_EVOS
 #endif //P_FAMILY_CHANSEY
 
 #if P_FAMILY_TANGELA

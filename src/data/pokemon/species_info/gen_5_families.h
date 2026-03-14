@@ -6013,73 +6013,73 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_COFAGRIGUS}),
     },
 
-    [SPECIES_COFAGRIGUS] =
-    {
-        .baseHP        = 58,
-        .baseAttack    = 50,
-        .baseDefense   = 145,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 105,
-        .types = MON_TYPES(TYPE_GHOST),
-        .catchRate = 90,
-        .expYield = 169,
-        .evYield_Defense = 2,
-        .itemRare = ITEM_SPELL_TAG,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 25,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS),
-        .abilities = { ABILITY_MUMMY, ABILITY_NONE, ABILITY_NONE },
-        .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Cofagrigus"),
-        .cryId = CRY_COFAGRIGUS,
-        .natDexNum = NATIONAL_DEX_COFAGRIGUS,
-        .categoryName = _("Coffin"),
-        .height = 17,
-        .weight = 765,
-        .description = COMPOUND_STRING(
-            "Grave robbers who mistake them for\n"
-            "real coffins and get too close end up\n"
-            "trapped inside their bodies. Their bodies\n"
-            "are covered in pure gold."),
-        .pokemonScale = 259,
-        .pokemonOffset = 0,
-        .trainerScale = 290,
-        .trainerOffset = 1,
-        .frontPic = gMonFrontPic_Cofagrigus,
-        .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 10),
-        ),
-        .frontAnimId = ANIM_GLOW_BLACK,
-        .backPic = gMonBackPic_Cofagrigus,
-        .backPicSize = MON_COORDS_SIZE(56, 56),
-        .backPicYOffset = 6,
-        .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
-        .palette = gMonPalette_Cofagrigus,
-        .shinyPalette = gMonShinyPalette_Cofagrigus,
-        .iconSprite = gMonIcon_Cofagrigus,
-        .iconPalIndex = 0,
-        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(6, 12, SHADOW_SIZE_M)
-        FOOTPRINT(Cofagrigus)
-        OVERWORLD(
-            sPicTable_Cofagrigus,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Cofagrigus,
-            gShinyOverworldPalette_Cofagrigus
-        )
-        .levelUpLearnset = sCofagrigusLevelUpLearnset,
-        .teachableLearnset = sCofagrigusTeachableLearnset,
-    },
+    // [SPECIES_COFAGRIGUS] =
+    // {
+    //     .baseHP        = 58,
+    //     .baseAttack    = 50,
+    //     .baseDefense   = 145,
+    //     .baseSpeed     = 30,
+    //     .baseSpAttack  = 95,
+    //     .baseSpDefense = 105,
+    //     .types = MON_TYPES(TYPE_GHOST),
+    //     .catchRate = 90,
+    //     .expYield = 169,
+    //     .evYield_Defense = 2,
+    //     .itemRare = ITEM_SPELL_TAG,
+    //     .genderRatio = PERCENT_FEMALE(50),
+    //     .eggCycles = 25,
+    //     .friendship = STANDARD_FRIENDSHIP,
+    //     .growthRate = GROWTH_MEDIUM_FAST,
+    //     .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL, EGG_GROUP_AMORPHOUS),
+    //     .abilities = { ABILITY_MUMMY, ABILITY_NONE, ABILITY_NONE },
+    //     .bodyColor = BODY_COLOR_YELLOW,
+    //     .speciesName = _("Cofagrigus"),
+    //     .cryId = CRY_COFAGRIGUS,
+    //     .natDexNum = NATIONAL_DEX_COFAGRIGUS,
+    //     .categoryName = _("Coffin"),
+    //     .height = 17,
+    //     .weight = 765,
+    //     .description = COMPOUND_STRING(
+    //         "Grave robbers who mistake them for\n"
+    //         "real coffins and get too close end up\n"
+    //         "trapped inside their bodies. Their bodies\n"
+    //         "are covered in pure gold."),
+    //     .pokemonScale = 259,
+    //     .pokemonOffset = 0,
+    //     .trainerScale = 290,
+    //     .trainerOffset = 1,
+    //     .frontPic = gMonFrontPic_Cofagrigus,
+    //     .frontPicSize = MON_COORDS_SIZE(64, 64),
+    //     .frontPicYOffset = 0,
+    //     .frontAnimFrames = ANIM_FRAMES(
+    //         ANIMCMD_FRAME(1, 50),
+    //         ANIMCMD_FRAME(1, 30),
+    //         ANIMCMD_FRAME(0, 10),
+    //     ),
+    //     .frontAnimId = ANIM_GLOW_BLACK,
+    //     .backPic = gMonBackPic_Cofagrigus,
+    //     .backPicSize = MON_COORDS_SIZE(56, 56),
+    //     .backPicYOffset = 6,
+    //     .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
+    //     .palette = gMonPalette_Cofagrigus,
+    //     .shinyPalette = gMonShinyPalette_Cofagrigus,
+    //     .iconSprite = gMonIcon_Cofagrigus,
+    //     .iconPalIndex = 0,
+    //     .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+    //     SHADOW(6, 12, SHADOW_SIZE_M)
+    //     FOOTPRINT(Cofagrigus)
+    //     OVERWORLD(
+    //         sPicTable_Cofagrigus,
+    //         SIZE_32x32,
+    //         SHADOW_SIZE_M,
+    //         TRACKS_FOOT,
+    //         sAnimTable_Following,
+    //         gOverworldPalette_Cofagrigus,
+    //         gShinyOverworldPalette_Cofagrigus
+    //     )
+    //     .levelUpLearnset = sCofagrigusLevelUpLearnset,
+    //     .teachableLearnset = sCofagrigusTeachableLearnset,
+    // },
 
 #if P_GALARIAN_FORMS
     [SPECIES_YAMASK_GALAR] =

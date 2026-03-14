@@ -5657,94 +5657,90 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sSneaselTeachableLearnset,
         .eggMoveLearnset = sSneaselEggMoveLearnset,
         .formSpeciesIdTable = sSneaselFormSpeciesIdTable,
-    #if P_GEN_4_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_WEAVILE, CONDITIONS({IF_TIME, TIME_NIGHT}, {IF_HOLD_ITEM, ITEM_RAZOR_CLAW})},
-                                {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_WEAVILE, CONDITIONS({IF_TIME, TIME_NIGHT})}),
-    #endif
     },
 
-#if P_GEN_4_CROSS_EVOS
-    [SPECIES_WEAVILE] =
-    {
-        .baseHP        = 70,
-        .baseAttack    = 120,
-        .baseDefense   = 65,
-        .baseSpeed     = 125,
-        .baseSpAttack  = 45,
-        .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_DARK, TYPE_ICE),
-        .catchRate = 45,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 179 : 199,
-        .evYield_Attack = 1,
-        .evYield_Speed = 1,
-        .itemRare = ITEM_QUICK_CLAW,
-        .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 20,
-        .friendship = 35,
-        .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_PICKPOCKET },
-        .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("Weavile"),
-        .cryId = CRY_WEAVILE,
-        .natDexNum = NATIONAL_DEX_WEAVILE,
-        .categoryName = _("Sharp Claw"),
-        .height = 11,
-        .weight = 340,
-        .description = COMPOUND_STRING(
-            "They travel in groups of four or five,\n"
-            "leaving signs for one another on trees\n"
-            "and rocks. They bring down their prey\n"
-            "with coordinated attacks."),
-        .pokemonScale = 320,
-        .pokemonOffset = 7,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Weavile,
-        .frontPicSize = MON_COORDS_SIZE(56, 56),
-        .frontPicYOffset = 4,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
-        .frontAnimId = ANIM_H_VIBRATE,
-        .backPic = gMonBackPic_Weavile,
-        .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 6,
-        .backAnimId = BACK_ANIM_JOLT_RIGHT,
-        .palette = gMonPalette_Weavile,
-        .shinyPalette = gMonShinyPalette_Weavile,
-        .iconSprite = gMonIcon_Weavile,
-        .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
-        .frontPicFemale = gMonFrontPic_WeavileF,
-        .frontPicSizeFemale = MON_COORDS_SIZE(56, 56),
-        .backPicFemale = gMonBackPic_WeavileF,
-        .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
-#endif //P_GENDER_DIFFERENCES
-        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(-4, 10, SHADOW_SIZE_M)
-        FOOTPRINT(Weavile)
-        OVERWORLD(
-            sPicTable_Weavile,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Weavile,
-            gShinyOverworldPalette_Weavile
-        )
-        OVERWORLD_FEMALE(
-            sPicTable_WeavileF,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following
-        )
-        .levelUpLearnset = sWeavileLevelUpLearnset,
-        .teachableLearnset = sWeavileTeachableLearnset,
-    },
-#endif //P_GEN_4_CROSS_EVOS
+//#if P_GEN_4_CROSS_EVOS
+    //[SPECIES_WEAVILE] =
+    //{
+    //    .baseHP        = 70,
+//         .baseAttack    = 120,
+//         .baseDefense   = 65,
+//         .baseSpeed     = 125,
+//         .baseSpAttack  = 45,
+//         .baseSpDefense = 85,
+//         .types = MON_TYPES(TYPE_DARK, TYPE_ICE),
+//         .catchRate = 45,
+//         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 179 : 199,
+//         .evYield_Attack = 1,
+//         .evYield_Speed = 1,
+//         .itemRare = ITEM_QUICK_CLAW,
+//         .genderRatio = PERCENT_FEMALE(50),
+//         .eggCycles = 20,
+//         .friendship = 35,
+//         .growthRate = GROWTH_MEDIUM_SLOW,
+//         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+//         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_PICKPOCKET },
+//         .bodyColor = BODY_COLOR_BLACK,
+//         .speciesName = _("Weavile"),
+//         .cryId = CRY_WEAVILE,
+//         .natDexNum = NATIONAL_DEX_WEAVILE,
+//         .categoryName = _("Sharp Claw"),
+//         .height = 11,
+//         .weight = 340,
+//         .description = COMPOUND_STRING(
+//             "They travel in groups of four or five,\n"
+//             "leaving signs for one another on trees\n"
+//             "and rocks. They bring down their prey\n"
+//             "with coordinated attacks."),
+//         .pokemonScale = 320,
+//         .pokemonOffset = 7,
+//         .trainerScale = 256,
+//         .trainerOffset = 0,
+//         .frontPic = gMonFrontPic_Weavile,
+//         .frontPicSize = MON_COORDS_SIZE(56, 56),
+//         .frontPicYOffset = 4,
+//         .frontAnimFrames = ANIM_FRAMES(
+//             ANIMCMD_FRAME(1, 15),
+//             ANIMCMD_FRAME(0, 15),
+//         ),
+//         .frontAnimId = ANIM_H_VIBRATE,
+//         .backPic = gMonBackPic_Weavile,
+//         .backPicSize = MON_COORDS_SIZE(64, 64),
+//         .backPicYOffset = 6,
+//         .backAnimId = BACK_ANIM_JOLT_RIGHT,
+//         .palette = gMonPalette_Weavile,
+//         .shinyPalette = gMonShinyPalette_Weavile,
+//         .iconSprite = gMonIcon_Weavile,
+//         .iconPalIndex = 0,
+// #if P_GENDER_DIFFERENCES
+//         .frontPicFemale = gMonFrontPic_WeavileF,
+//         .frontPicSizeFemale = MON_COORDS_SIZE(56, 56),
+//         .backPicFemale = gMonBackPic_WeavileF,
+//         .backPicSizeFemale = MON_COORDS_SIZE(64, 64),
+// #endif //P_GENDER_DIFFERENCES
+//         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+//         SHADOW(-4, 10, SHADOW_SIZE_M)
+//         FOOTPRINT(Weavile)
+//         OVERWORLD(
+//             sPicTable_Weavile,
+//             SIZE_32x32,
+//             SHADOW_SIZE_M,
+//             TRACKS_FOOT,
+//             sAnimTable_Following,
+//             gOverworldPalette_Weavile,
+//             gShinyOverworldPalette_Weavile
+//         )
+//         OVERWORLD_FEMALE(
+//             sPicTable_WeavileF,
+//             SIZE_32x32,
+//             SHADOW_SIZE_M,
+//             TRACKS_FOOT,
+//             sAnimTable_Following
+//         )
+//         .levelUpLearnset = sWeavileLevelUpLearnset,
+//         .teachableLearnset = sWeavileTeachableLearnset,
+//     },
+// #endif //P_GEN_4_CROSS_EVOS
 
 #if P_HISUIAN_FORMS
     [SPECIES_SNEASEL_HISUI] =
