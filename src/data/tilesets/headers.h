@@ -1552,3 +1552,80 @@ const struct Tileset gTileset_PorytilesPrimaryTest =
     .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_DesertNew =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_DesertNew,
+    .palettes = gTilesetPalettes_DesertNew,
+    .metatiles = gMetatiles_DesertNew,
+    .metatileAttributes = gMetatileAttributes_DesertNew,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_DesertPyramid =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DesertPyramid,
+    .palettes = gTilesetPalettes_DesertPyramid,
+    .metatiles = gMetatiles_DesertPyramid,
+    .metatileAttributes = gMetatileAttributes_DesertPyramid,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_DesertTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DesertTown,
+    .palettes = gTilesetPalettes_DesertTown,
+    .metatiles = gMetatiles_DesertTown,
+    .metatileAttributes = gMetatileAttributes_DesertTown,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_MauvilleORAS =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MauvilleORAS,
+    .palettes = gTilesetPalettes_MauvilleORAS,
+    .metatiles = gMetatiles_MauvilleORAS,
+    .metatileAttributes = gMetatileAttributes_MauvilleORAS,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_CavesAltSecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CavesAltSecondary,
+    .palettes = gTilesetPalettes_CavesAltSecondary,
+    .metatiles = gMetatiles_CavesAltSecondary,
+    .metatileAttributes = gMetatileAttributes_CavesAltSecondary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PyramidInteriorPrimary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PyramidInteriorPrimary,
+    .palettes = gTilesetPalettes_PyramidInteriorPrimary,
+    .metatiles = gMetatiles_PyramidInteriorPrimary,
+    .metatileAttributes = gMetatileAttributes_PyramidInteriorPrimary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_ZeldaHouse =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ZeldaHouse,
+    .palettes = gTilesetPalettes_ZeldaHouse,
+    .metatiles = gMetatiles_ZeldaHouse,
+    .metatileAttributes = gMetatileAttributes_ZeldaHouse,
+    .callback = NULL,
+};

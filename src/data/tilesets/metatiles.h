@@ -411,3 +411,24 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatile_attributes.bin");
+
+const u16 gMetatiles_DesertNew[] = INCBIN_U16("data/tilesets/primary/desert_new/metatiles.bin");
+const u16 gMetatileAttributes_DesertNew[] = INCBIN_U16("data/tilesets/primary/desert_new/metatile_attributes.bin");
+
+const u16 gMetatiles_DesertPyramid[] = INCBIN_U16("data/tilesets/secondary/desert_pyramid/metatiles.bin");
+const u16 gMetatileAttributes_DesertPyramid[] = INCBIN_U16("data/tilesets/secondary/desert_pyramid/metatile_attributes.bin");
+
+const u16 gMetatiles_DesertTown[] = INCBIN_U16("data/tilesets/secondary/desert_town/metatiles.bin");
+const u16 gMetatileAttributes_DesertTown[] = INCBIN_U16("data/tilesets/secondary/desert_town/metatile_attributes.bin");
+
+const u16 gMetatiles_MauvilleORAS[] = INCBIN_U16("data/tilesets/secondary/mauville_oras/metatiles.bin");
+const u16 gMetatileAttributes_MauvilleORAS[] = INCBIN_U16("data/tilesets/secondary/mauville_oras/metatile_attributes.bin");
+
+const u16 gMetatiles_CavesAltSecondary[] = INCBIN_U16("data/tilesets/secondary/caves_alt_secondary/metatiles.bin");
+const u16 gMetatileAttributes_CavesAltSecondary[] = INCBIN_U16("data/tilesets/secondary/caves_alt_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_PyramidInteriorPrimary[] = INCBIN_U16("data/tilesets/primary/pyramid_interior_primary/metatiles.bin");
+const u16 gMetatileAttributes_PyramidInteriorPrimary[] = INCBIN_U16("data/tilesets/primary/pyramid_interior_primary/metatile_attributes.bin");
+
+const u16 gMetatiles_ZeldaHouse[] = INCBIN_U16("data/tilesets/secondary/zelda_house/metatiles.bin");
+const u16 gMetatileAttributes_ZeldaHouse[] = INCBIN_U16("data/tilesets/secondary/zelda_house/metatile_attributes.bin");

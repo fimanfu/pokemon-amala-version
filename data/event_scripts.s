@@ -1740,3 +1740,23 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/DamatraVillage_House1/scripts.inc"
 
 	.include "data/maps/PorytilesTestMap/scripts.inc"
+
+	.include "data/maps/Damatra_Village/scripts.inc"
+
+	.include "data/maps/First_Path/scripts.inc"
+
+	.include "data/maps/Iccebucurou_Town/scripts.inc"
+
+	.include "data/maps/Damatra_ChiefsCave/scripts.inc"
+
+	.include "data/maps/DamatraHouse_3/scripts.inc"
+
+	.include "data/maps/DamatraHouse_2/scripts.inc"
+
+	.include "data/maps/Damatra_RivalHouse/scripts.inc"
+
+	.include "data/maps/Damatra_ProtagonistHouse/scripts.inc"
+
+	.include "data/maps/DamatraHouse_1/scripts.inc"
+
+	.include "data/maps/Damatra_ChiefsCave_2F/scripts.inc"

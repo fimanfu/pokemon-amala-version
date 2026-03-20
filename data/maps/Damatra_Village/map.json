@@ -1,0 +1,77 @@
+{
+  "id": "MAP_DAMATRA_VILLAGE",
+  "name": "Damatra_Village",
+  "layout": "LAYOUT_DAMATRA_VILLAGE",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_FIRST_PATH",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "warp_id": "WARP_ID_DAMATRA_TEST",
+      "x": 11,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_DAMATRA_PROTAGONIST_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_DAMATRA_CHIEFS_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_DAMATRA_CHIEFS_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_DAMATRA_RIVAL_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_DAMATRA_VILLAGE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_DAMATRA_VILLAGE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_DAMATRA_HOUSE_1",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

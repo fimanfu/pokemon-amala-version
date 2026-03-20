@@ -74,7 +74,9 @@
     "gMapGroup_IndoorFiveIslandRoute_Frlg",
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
-    "gMapGroup_IndoorSevenIslandRoute_Frlg"
+    "gMapGroup_IndoorSevenIslandRoute_Frlg",
+    "gMapGroup_AmalaTownsandRoutes",
+    "gMapGroup_Amala_IndoorDamatraVillage"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1162,5 +1164,19 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_AmalaTownsandRoutes": [
+    "Damatra_Village",
+    "First_Path",
+    "Iccebucurou_Town"
+  ],
+  "gMapGroup_Amala_IndoorDamatraVillage": [
+    "DamatraHouse_1",
+    "DamatraHouse_2",
+    "DamatraHouse_3",
+    "Damatra_ProtagonistHouse",
+    "Damatra_RivalHouse",
+    "Damatra_ChiefsCave",
+    "Damatra_ChiefsCave_2F"
   ]
 }

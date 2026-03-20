@@ -9343,6 +9343,106 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_VILLAGE",
+      "name": "Damatra_Village_Layout",
+      "width": 40,
+      "height": 31,
+      "primary_tileset": "gTileset_DesertNew",
+      "secondary_tileset": "gTileset_DesertPyramid",
+      "border_filepath": "data/layouts/Damatra_Village/border.bin",
+      "blockdata_filepath": "data/layouts/Damatra_Village/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIRST_PATH",
+      "name": "First_Path_Layout",
+      "width": 53,
+      "height": 23,
+      "primary_tileset": "gTileset_DesertNew",
+      "secondary_tileset": "gTileset_DesertPyramid",
+      "border_filepath": "data/layouts/First_Path/border.bin",
+      "blockdata_filepath": "data/layouts/First_Path/map.bin"
+    },
+    {
+      "id": "LAYOUT_ICCEBUCUROU_TOWN",
+      "name": "Iccebucurou_Town_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_DesertNew",
+      "secondary_tileset": "gTileset_DesertTown",
+      "border_filepath": "data/layouts/Iccebucurou_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Iccebucurou_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_HOUSE_1",
+      "name": "DamatraHouse_1_Layout",
+      "width": 10,
+      "height": 6,
+      "primary_tileset": "gTileset_PyramidInteriorPrimary",
+      "secondary_tileset": "gTileset_ZeldaHouse",
+      "border_filepath": "data/layouts/DamatraHouse_1/border.bin",
+      "blockdata_filepath": "data/layouts/DamatraHouse_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_HOUSE_2",
+      "name": "DamatraHouse_2_Layout",
+      "width": 10,
+      "height": 6,
+      "primary_tileset": "gTileset_PyramidInteriorPrimary",
+      "secondary_tileset": "gTileset_ZeldaHouse",
+      "border_filepath": "data/layouts/DamatraHouse_2/border.bin",
+      "blockdata_filepath": "data/layouts/DamatraHouse_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_HOUSE_3",
+      "name": "DamatraHouse_3_Layout",
+      "width": 10,
+      "height": 6,
+      "primary_tileset": "gTileset_PyramidInteriorPrimary",
+      "secondary_tileset": "gTileset_ZeldaHouse",
+      "border_filepath": "data/layouts/DamatraHouse_3/border.bin",
+      "blockdata_filepath": "data/layouts/DamatraHouse_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_PROTAGONIST_HOUSE",
+      "name": "Damatra_ProtagonistHouse_Layout",
+      "width": 10,
+      "height": 6,
+      "primary_tileset": "gTileset_PyramidInteriorPrimary",
+      "secondary_tileset": "gTileset_ZeldaHouse",
+      "border_filepath": "data/layouts/Damatra_ProtagonistHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Damatra_ProtagonistHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_CHIEFS_CAVE",
+      "name": "Damatra_ChiefsCave_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "secondary_tileset": "gTileset_CavesAltSecondary",
+      "border_filepath": "data/layouts/Damatra_ChiefsCave/border.bin",
+      "blockdata_filepath": "data/layouts/Damatra_ChiefsCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_RIVAL_HOUSE",
+      "name": "Damatra_RivalHouse_Layout",
+      "width": 10,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/Damatra_RivalHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Damatra_RivalHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAMATRA_CHIEFS_CAVE_2F",
+      "name": "Damatra_ChiefsCave_2F_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "secondary_tileset": "gTileset_CavesAltSecondary",
+      "border_filepath": "data/layouts/Damatra_ChiefsCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Damatra_ChiefsCave_2F/map.bin"
     }
   ]
 }
