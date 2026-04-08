@@ -21510,6 +21510,589 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Fissure,
     },    
 
+    [MOVE_PRAYER] =
+    {
+        .name = COMPOUND_STRING("Prayer"),
+        .description = COMPOUND_STRING(
+            "Faith of a monk.\n"
+            "Heals all HP and statuses"),
+        .effect = EFFECT_MEDIARAHAN,
+        .power = 0,
+        .type = TYPE_GHOST,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_REMOVE_STATUS,
+        }),
+        .zMove = { .effect = Z_EFFECT_RESET_STATS },
+        .healingMove = TRUE,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .battleAnimScript = gBattleAnimMove_Moonlight,
+        .validApprenticeMove = TRUE,
+    },
+
+    [MOVE_HELL_BURNER] =
+    {
+        .name = COMPOUND_STRING("Hell Burner"),
+        .description = COMPOUND_STRING(
+            "Get wrecked by the exhausts\n"
+            "of hell. May burn."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 10,
+        }),
+        .battleAnimScript = gBattleAnimMove_Inferno,
+    },
+
+    [MOVE_TERRORBLADE] =
+    {
+        .name = COMPOUND_STRING("Terrorblade"),
+        .description = COMPOUND_STRING(
+            "A blade that inflicts cold,\n"
+            "hard fear. Enemies may flinch."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 50,
+        }),
+        .battleAnimScript = gBattleAnimMove_SacredSword,
+    },
+
+    [MOVE_BABYLON_GOBLET] =
+    {
+        .name = COMPOUND_STRING("Babylon Goblet"),
+        .description = COMPOUND_STRING(
+            "The overflowing desires of\n"
+            "humanity go forth and strike."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Surf,
+    },
+
+    [MOVE_EVIL_MELODY] =
+    {
+        .name = COMPOUND_STRING("Evil Melody"),
+        .description = COMPOUND_STRING(
+            "The seven horns sound forth.\n"
+            "Guaranteed instakill."),
+        .effect = EFFECT_OHKO,
+        .power = 1,
+        .type = TYPE_MYSTERY,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Sing,
+    },
+
+    [MOVE_MUDOBARION] =
+    {
+        .name = COMPOUND_STRING("Mudobarion"),
+        .description = COMPOUND_STRING(
+            "Severe Dark damage,\n"
+            "Instakill not included."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_DarkPulse,
+    },
+
+    [MOVE_HAMABARION] =
+    {
+        .name = COMPOUND_STRING("Hamabarion"),
+        .description = COMPOUND_STRING(
+            "Severe Light damage,\n"
+            "Instakill not included."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_DazzlingGleam,
+    },
+
+    [MOVE_AGIBARION] =
+    {
+        .name = COMPOUND_STRING("Agibarion"),
+        .description = COMPOUND_STRING(
+            "Severe Fire damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_FireBlast,
+    },
+
+    [MOVE_BUFUBARION] =
+    {
+        .name = COMPOUND_STRING("Bufubarion"),
+        .description = COMPOUND_STRING(
+            "Severe Ice damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_SheerCold,
+    },
+
+    [MOVE_GARUBARION] =
+    {
+        .name = COMPOUND_STRING("Garubarion"),
+        .description = COMPOUND_STRING(
+            "Severe Wind damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Aeroblast,
+    },
+
+    [MOVE_ZANBARION] =
+    {
+        .name = COMPOUND_STRING("Zanbarion"),
+        .description = COMPOUND_STRING(
+            "Severe Force damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_DragonPulse,
+    },
+
+    [MOVE_ZIOBARION] =
+    {
+        .name = COMPOUND_STRING("Ziobarion"),
+        .description = COMPOUND_STRING(
+            "Severe Electric damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Thunder,
+    },
+        
+    [MOVE_TERABARION] =
+    {
+        .name = COMPOUND_STRING("Terabarion"),
+        .description = COMPOUND_STRING(
+            "Severe Earth damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_StoneEdge,
+    },
+
+    [MOVE_FREIBARION] =
+    {
+        .name = COMPOUND_STRING("Freibarion"),
+        .description = COMPOUND_STRING(
+            "Severe Nuclear damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_EnergyBall,
+    },
+
+    [MOVE_PSIOBARION] =
+    {
+        .name = COMPOUND_STRING("Psiobarion"),
+        .description = COMPOUND_STRING(
+            "Severe Psy damage."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Psychic,
+    },
+
+    [MOVE_MEGIDOLAON] =
+    {
+        .name = COMPOUND_STRING("Megidolaon"),
+        .description = COMPOUND_STRING(
+            "Heavy Almighty Damage to\n."
+            "all enemies."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_SelfDestruct,
+    },
+
+    [MOVE_MEGIDOLADYNE] =
+    {
+        .name = COMPOUND_STRING("Megidoladyne"),
+        .description = COMPOUND_STRING(
+            "Severe Almighty Damage to\n."
+            "all enemies."),
+        .effect = EFFECT_HIT,
+        .power = 130,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_LusterPurge,
+    },
+
+    [MOVE_MORNING_STAR] =
+    {
+        .name = COMPOUND_STRING("Morning Star"),
+        .description = COMPOUND_STRING(
+            "Boosts all stats. Ultimate\n."
+            "Almighty damage to all enemies."),
+        .effect = EFFECT_HIT,
+        .power = 170,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 6,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_RASUTA_CANDY,
+            .self = TRUE,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_LightThatBurnsTheSky,
+    },
+
+    [MOVE_GIGANTOMACHIA] =
+    {
+        .name = COMPOUND_STRING("Gigantomachia"),
+        .description = COMPOUND_STRING(
+            "Wrath made manifest. Severe\n."
+            "Physical damage to all enemies."),
+        .effect = EFFECT_HIT,
+        .power = 125,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 15,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_AllOutPummeling,
+    },
+
+    [MOVE_DEBILITATE] =
+    {
+        .name = COMPOUND_STRING("Debilitate"),
+        .description = COMPOUND_STRING(
+            "All stats down for all\n."
+            "enemies."),
+        .effect = EFFECT_DEBILITATE,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .battleAnimScript = gBattleAnimMove_DarkVoid,
+    },
+
+    [MOVE_LUSTER_CANDY] =
+    {
+        .name = COMPOUND_STRING("Luster Candy"),
+        .description = COMPOUND_STRING(
+            "All stats up for all\n."
+            "allies."),
+        .effect = EFFECT_RASUTA_CANDY,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .battleAnimScript = gBattleAnimMove_Geomancy,
+    },
+
+    [MOVE_MEDIARAHAN] =
+    {
+        .name = COMPOUND_STRING("Mediarahan"),
+        .description = COMPOUND_STRING(
+            "Fully heals HP for all\n."
+            "allies."),
+        .effect = EFFECT_MEDIARAHAN,
+        .power = 0,
+        .type = TYPE_FAIRY,
+        .accuracy = 0,
+        .pp = 10,
+        .target = TARGET_USER_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .battleAnimScript = gBattleAnimMove_Synthesis,
+    },
+
+    [MOVE_GAE_BOLG] =
+    {
+        .name = COMPOUND_STRING("Gae Bolg"),
+        .description = COMPOUND_STRING(
+            "Gay Bulge. Always crits."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_BraveBird,
+    },  
+    
+    [MOVE_CTOPLEASURE] =
+    {
+        .name = COMPOUND_STRING("C. To Pleasure"),
+        .description = COMPOUND_STRING(
+            "Capitulate to Pleasure. Removes\n"
+            "enemy stat buffs and infatuates."),
+        .effect = EFFECT_ATTRACT,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_CLEAR_SMOG,
+        }),
+        .battleAnimScript = gBattleAnimMove_Charm,
+    },
+
+    [MOVE_VSALVATION] =
+    {
+        .name = COMPOUND_STRING("V. Salvation"),
+        .description = COMPOUND_STRING(
+            "Voracious Salvation. Drains HP."),
+        .effect = EFFECT_ABSORB,
+        .power = 130,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_Charm,
+    },
+
+    [MOVE_QUEENS_DECREE] =
+    {
+        .name = COMPOUND_STRING("Queen's Decree"),
+        .description = COMPOUND_STRING(
+            "Multihit heavy Almighty damage."),
+        .effect = EFFECT_HIT,
+        .power = 77,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .multiHit = TRUE,
+        .battleAnimScript = gBattleAnimMove_DazzlingGleam,
+    },
+
+    [MOVE_MOTHER_EARTH] =
+    {
+        .name = COMPOUND_STRING("Mother Earth"),
+        .description = COMPOUND_STRING(
+            "Protects allies from one attack\n"
+            "and raises all stats."),
+        .effect = EFFECT_PROTECT,
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 10,
+        .target = TARGET_USER_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_RASUTA_CANDY,
+            .self = TRUE,
+            .chance = 100,
+        }),
+        .argument = { .protectMethod = PROTECT_NORMAL },
+        .battleAnimScript = gBattleAnimMove_Protect,
+    },
+
+    [MOVE_DIE_FOR_ME] =
+    {
+        .name = COMPOUND_STRING("Die For Me!"),
+        .description = COMPOUND_STRING(
+            "You WILL die, won't you?"),
+        .effect = EFFECT_OHKO,
+        .power = 1,
+        .type = TYPE_DARK,
+        .accuracy = 70,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Curse,
+    },
+
+    [MOVE_KERAUNOS] =
+    {
+        .name = COMPOUND_STRING("Keraunos"),
+        .description = COMPOUND_STRING(
+            "Severe physical Electric damage."),
+        .effect = EFFECT_HIT,
+        .power = 140,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .battleAnimScript = gBattleAnimMove_ThunderPunch,
+    },
+
+    [MOVE_TANDAVA] =
+    {
+        .name = COMPOUND_STRING("Tandava"),
+        .description = COMPOUND_STRING(
+            "The dance of Destruction. Severe\n"
+            "Almighty damage and lowers Defense."),
+        .effect = EFFECT_HIT,
+        .power = 150,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 5,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_DEF_MINUS_2,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_Explosion,
+    },
+
+    [MOVE_FIRE_OF_SINAI] =
+    {
+        .name = COMPOUND_STRING("Fire of Sinai"),
+        .description = COMPOUND_STRING(
+            "The flames that spoke to Moses.\n"
+            "Almighty damage that burns enemy."),
+        .effect = EFFECT_HIT,
+        .power = 165,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_LavaPlume,
+    },
+
+    [MOVE_MARALAGIBARION] =
+    {
+        .name = COMPOUND_STRING("Maralagibarion"),
+        .description = COMPOUND_STRING(
+            "Mara's burning passion!"),
+        .effect = EFFECT_HIT,
+        .power = 169,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 100,
+        }),
+        .battleAnimScript = gBattleAnimMove_InfernoOverdrive,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

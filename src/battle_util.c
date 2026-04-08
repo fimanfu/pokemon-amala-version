@@ -1841,6 +1841,16 @@ s32 GetDrainedBigRootHp(enum BattlerId battler, s32 hp)
     return hp;
 }
 
+s32 GetDrainedSolemnVowHp(struct BattleContext *ctx, enum BattlerId battler, s32 hp)
+{
+    if (ctx->abilityAtk == ABILITY_SOLEMN_VOW)
+        hp = (hp * 1300) / 1000;
+    if (hp == 0)
+        hp = 1;    
+
+    return hp;
+}
+
 // Should always be the last check. Otherwise the ability might be wrongly recorded.
 bool32 IsAbilityAndRecord(enum BattlerId battler, enum Ability battlerAbility, enum Ability abilityToCheck)
 {
@@ -4211,6 +4221,40 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 effect++;
             }
             break;
+        case ABILITY_SEVEN_HEADED_BEAST:
+            if (IsBattlerAlive(gBattlerAttacker)
+             && !gBattleStruct->unableToUseMove
+             && IsBattlerTurnDamaged(gBattlerTarget)
+             && IsBattlerAlive(gBattlerTarget)
+             && (GetConfig(B_ABILITY_TRIGGER_CHANCE) >= GEN_4 ? RandomPercentage(RNG_CUTE_CHARM, 77) : RandomChance(RNG_CUTE_CHARM, 1, 3))
+             && !(gBattleMons[gBattlerAttacker].volatiles.infatuation)
+             && AreBattlersOfOppositeGender(gBattlerAttacker, gBattlerTarget)
+             && !IsAbilityAndRecord(gBattlerAttacker, GetBattlerAbility(gBattlerAttacker), ABILITY_OBLIVIOUS)
+             && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), move)
+             && !IsAbilityOnSide(gBattlerAttacker, ABILITY_AROMA_VEIL))
+            {
+                gBattleMons[gBattlerAttacker].volatiles.infatuation = INFATUATED_WITH(gBattlerTarget);
+                BattleScriptCall(BattleScript_SevenHeadedTrigger);
+                effect++;
+            }
+            break;
+        case ABILITY_MARAS_MIGHT:
+            if (IsBattlerAlive(gBattlerAttacker)
+             && !gBattleStruct->unableToUseMove
+             && IsBattlerTurnDamaged(gBattlerTarget)
+             && IsBattlerAlive(gBattlerTarget)
+             && (GetConfig(B_ABILITY_TRIGGER_CHANCE) >= GEN_4 ? RandomPercentage(RNG_CUTE_CHARM, 69) : RandomChance(RNG_CUTE_CHARM, 1, 3))
+             && !(gBattleMons[gBattlerAttacker].volatiles.infatuation)
+             && AreBattlersOfOppositeGender(gBattlerAttacker, gBattlerTarget)
+             && !IsAbilityAndRecord(gBattlerAttacker, GetBattlerAbility(gBattlerAttacker), ABILITY_OBLIVIOUS)
+             && !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), move)
+             && !IsAbilityOnSide(gBattlerAttacker, ABILITY_AROMA_VEIL))
+            {
+                gBattleMons[gBattlerAttacker].volatiles.infatuation = INFATUATED_WITH(gBattlerTarget);
+                BattleScriptCall(BattleScript_CuteCharmActivates);
+                effect++;
+            }
+            break;
         case ABILITY_ILLUSION:
             if (gBattleStruct->illusion[gBattlerTarget].state == ILLUSION_ON && IsBattlerTurnDamaged(gBattlerTarget))
             {
@@ -4383,6 +4427,24 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 BattleScriptCall(BattleScript_AbilityStatusEffect);
                 effect++;
             }
+            break;
+        case ABILITY_CRIPPLING_BLOW:
+        {
+        bool32 isCrit = TRUE;
+        {
+            if (IsBattlerAlive(gBattlerTarget)
+             && !gBattleStruct->unableToUseMove
+             && IsBattlerTurnDamaged(gBattlerTarget))
+            {
+                gEffectBattler = gBattlerTarget;
+                gBattleScripting.battler = gBattlerAttacker;
+                SET_STATCHANGER(STAT_ACC, 1, TRUE);
+                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                BattleScriptCall(BattleScript_CripplingBlow);
+                effect++;
+            }
+        }
+        }
             break;
         default:
             break;
@@ -6964,19 +7026,19 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_SWARM:
-        if (moveType == TYPE_BUG && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_BUG && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_TORRENT:
-        if (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_BLAZE:
-        if (moveType == TYPE_FIRE && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_FIRE && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_OVERGROW:
-        if (moveType == TYPE_GRASS && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_GRASS && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_PLUS:
@@ -7980,7 +8042,16 @@ static inline u32 GetHoldEffectCritChanceIncrease(enum BattlerId battler, enum H
 s32 CalcCritChanceStage(struct BattleContext *ctx)
 {
     s32 critChance = 0;
-
+    
+    if (!HasBattlerActedThisTurn(ctx->battlerDef) && ctx->abilityAtk == ABILITY_SPEED_STAR)
+    {
+        critChance = CRITICAL_HIT_ALWAYS;
+    }
+    if(ctx->abilityAtk == ABILITY_DAWN_OF_DEMISE
+          ||ctx->abilityAtk == ABILITY_MARAS_MIGHT)
+    {
+        critChance = CRITICAL_HIT_ALWAYS;
+    }
     if (gSideStatuses[GetBattlerSide(ctx->battlerDef)] & SIDE_STATUS_LUCKY_CHANT)
     {
         critChance = CRITICAL_HIT_BLOCKED;

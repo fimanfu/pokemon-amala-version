@@ -2242,4 +2242,28 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectHit,
         .battleTvScore = 0, // TODO: Assign points
     },
+
+    [EFFECT_MEDIARAHAN] =
+    {
+        .battleScript = BattleScript_Mediarahan,
+        .battleTvScore = 0, // TODO: Assign points
+    },  
+    
+    [EFFECT_MORNING_STAR] = 
+    {
+        .battleScript = BattleScript_MorningStar,
+        .battleTvScore = 0,
+    },
+
+    [EFFECT_RASUTA_CANDY] = 
+    {
+        .battleScript = BattleScript_RaSuTaMove,
+        .battleTvScore = 0,
+    },
+
+    [EFFECT_DEBILITATE] = 
+    {
+        .battleScript = BattleScript_DebilitateMove,
+        .battleTvScore = 0,
+    },
 };

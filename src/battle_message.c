@@ -878,6 +878,10 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_ZENMODETRIGGERED]                     = COMPOUND_STRING("{B_SCR_ABILITY} triggered!"),
     [STRINGID_ZENMODEENDED]                         = COMPOUND_STRING("{B_SCR_ABILITY} ended!"),
     [STRINGID_MAGATAMAACTIVE]                       = COMPOUND_STRING("The Magatama changes all affinities to Resist! "),
+    [STRINGID_SEVENHEADEDTRIGGER]                   = COMPOUND_STRING("The beasts gaze at your POKEMON!\nInfatuation sets in!"),
+    [STRINGID_RASUTA_CANDY]                         = COMPOUND_STRING("All stats raised!"),
+    [STRINGID_DEBILITATE]                           = COMPOUND_STRING("All stats lowered!"),
+    [STRINGID_MORNING_STAR]                         = COMPOUND_STRING("Lucifer's might!\nAll stats rose!"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =

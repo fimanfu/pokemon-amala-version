@@ -517,6 +517,7 @@ extern const u8 BattleScript_SkyDropTargetTooHeavy[];
 extern const u8 BattleScript_SkyDropFlyingType[];
 extern const u8 BattleScript_SkyDropNoTarget[];
 extern const u8 BattleScript_MagatamaActivates[];
+extern const u8 BattleScript_SevenHeadedTrigger[];
 
 // zmoves
 extern const u8 BattleScript_ZMoveActivateDamaging[];
@@ -801,5 +802,12 @@ extern const u8 BattleScript_GhostBallDodge[];
 extern const u8 BattleScript_GhostGetOutGetOut[];
 extern const u8 BattleScript_TooScaredToMove[];
 extern const u8 BattleScript_SilphScopeUnveiled[];
-
+extern const u8 BattleScript_Mediarahan[];
+extern const u8 BattleScript_MorningStar[];
+extern const u8 BattleScript_RaSuTaCandy[];
+extern const u8 BattleScript_Debilitate[];
+extern const u8 BattleScript_RaSuTaMove[];
+extern const u8 BattleScript_DebilitateMove[];
+extern const u8 BattleScript_CripplingBlow[];
+extern const u8 BattleScript_CripplingRet[];
 #endif // GUARD_BATTLE_SCRIPTS_H

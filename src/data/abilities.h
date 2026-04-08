@@ -2426,4 +2426,102 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeOverwritten = TRUE,
         .failsOnImposter = TRUE,
     },
+
+    [ABILITY_CRIPPLING_BLOW] =
+    {
+        .name = _("Crippling Blow"),
+        .description = COMPOUND_STRING("Critical hits lower accuracy"),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_SOLEMN_VOW] =
+    {
+        .name = _("Solemn Vow"),
+        .description = COMPOUND_STRING("Big Root item + Triage"),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_SPEED_STAR] =
+    {
+        .name = _("Speed Star"),
+        .description = COMPOUND_STRING("Criticals against slower opponents"),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_FOUR_HORSEMEN] =
+    {
+        .name = _("Four Horsemen"),
+        .description = COMPOUND_STRING("Boosts stats with number of Horsemen"),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_SEVEN_HEADED_BEAST] =
+    {
+        .name = _("7-Headed Beast"),
+        .description = COMPOUND_STRING("Chance to infatuate"),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_SEVEN_TRUMPETS] =
+    {
+        .name = _("Seven Trumpets"),
+        .description = COMPOUND_STRING("doot."),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_DAWN_OF_DEMISE] =
+    {
+        .name = _("Dawn of Demise"),
+        .description = COMPOUND_STRING("All attacks critical"),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeSuppressed = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
+
+    [ABILITY_MARAS_MIGHT] =
+    {
+        .name = _("Mara's Might"),
+        .description = COMPOUND_STRING("Dawn of Demise + Cute Charm"),
+        .aiRating = 10,
+        .cantBeCopied = TRUE,
+        .cantBeSwapped = TRUE,
+        .cantBeTraced = TRUE,
+        .cantBeSuppressed = TRUE,
+        .cantBeOverwritten = TRUE,
+        .failsOnImposter = TRUE,
+    },
 };

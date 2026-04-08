@@ -8262,3 +8262,121 @@ BattleScript_MagatamaActivates::
 	printstring STRINGID_MAGATAMAACTIVE
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_SevenHeadedTrigger::
+	call BattleScript_AbilityPopUp
+	volatileanimation BS_ATTACKER, VOLATILE_INFATUATION
+	printstring STRINGID_SEVENHEADEDTRIGGER
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_TryDestinyKnotTarget
+	return
+
+BattleScript_Mediarahan::
+	attackcanceler
+	jumpifvolatile BS_ATTACKER, VOLATILE_HEAL_BLOCK, BattleScript_MoveUsedHealBlockPrevents @ stops pollen puff
+	jumpifvolatile BS_TARGET, VOLATILE_HEAL_BLOCK, BattleScript_MoveUsedHealBlockPrevents
+	jumpifsubstituteblocks BattleScript_ButItFailed
+	tryhealpulse BattleScript_AlreadyAtFullHp
+	attackanimation
+	waitanimation
+	healthbarupdate BS_TARGET, PASSIVE_HP_UPDATE
+	datahpupdate BS_TARGET, PASSIVE_HP_UPDATE
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_RaSuTaCandy::
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, MAX_STAT_STAGE, BattleScript_RaSuTaAtk
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF, MAX_STAT_STAGE, BattleScript_RaSuTaAtk
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPEED, MAX_STAT_STAGE, BattleScript_RaSuTaAtk
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, MAX_STAT_STAGE, BattleScript_RaSuTaAtk
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPDEF, MAX_STAT_STAGE, BattleScript_RaSuTaAtk
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ACC, MAX_STAT_STAGE, BattleScript_RaSuTaAtk
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_EVASION MAX_STAT_STAGE, BattleScript_RaSuTaRet
+BattleScript_RaSuTaAtk::
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_RaSuTaDef, BIT_DEF | BIT_SPEED | BIT_SPATK | BIT_SPDEF |BIT_ACC | BIT_EVASION
+BattleScript_RaSuTaDef::
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_RaSuTaSpeed, BIT_SPEED | BIT_SPATK | BIT_SPDEF | BIT_ACC | BIT_EVASION
+BattleScript_RaSuTaSpeed::
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_RaSuTaSpAtk, BIT_SPATK | BIT_SPDEF | BIT_ACC | BIT_EVASION
+BattleScript_RaSuTaSpAtk::
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_RaSuTaSpDef, BIT_SPDEF | BIT_ACC | BIT_EVASION
+BattleScript_RaSuTaSpDef::
+	setstatchanger STAT_SPDEF, 1, FALSE
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_RaSuTaAcc, BIT_ACC | BIT_EVASION
+BattleScript_RaSuTaAcc::
+	setstatchanger STAT_ACC, 1, FALSE
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_RaSuTaEva, BIT_EVASION
+BattleScript_RaSuTaEva::
+	setstatchanger STAT_EVASION, 1, FALSE
+	statbuffchange BS_ATTACKER, STAT_CHANGE_ALLOW_PTR, BattleScript_RaSuTaRet
+	printstring STRINGID_RASUTA_CANDY
+BattleScript_RaSuTaRet::
+	return
+
+BattleScript_Debilitate::
+	jumpifstat BS_TARGET, CMP_GREATER_THAN, STAT_ATK, MIN_STAT_STAGE, BattleScript_DebilAtk
+	jumpifstat BS_TARGET, CMP_GREATER_THAN, STAT_DEF, MIN_STAT_STAGE, BattleScript_DebilAtk
+	jumpifstat BS_TARGET, CMP_GREATER_THAN, STAT_SPEED, MIN_STAT_STAGE, BattleScript_DebilAtk
+	jumpifstat BS_TARGET, CMP_GREATER_THAN, STAT_SPATK, MIN_STAT_STAGE, BattleScript_DebilAtk
+	jumpifstat BS_TARGET, CMP_GREATER_THAN, STAT_SPDEF, MIN_STAT_STAGE, BattleScript_DebilAtk
+	jumpifstat BS_TARGET, CMP_GREATER_THAN, STAT_ACC, MIN_STAT_STAGE, BattleScript_DebilAtk
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_EVASION, MIN_STAT_STAGE, BattleScript_DebilRet
+BattleScript_DebilAtk::
+	setstatchanger STAT_ATK, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_DebilDef, BIT_DEF | BIT_SPEED | BIT_SPATK | BIT_SPDEF |BIT_ACC | BIT_EVASION
+BattleScript_DebilDef::
+	setstatchanger STAT_DEF, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_DebilSpeed, BIT_SPEED | BIT_SPATK | BIT_SPDEF | BIT_ACC | BIT_EVASION
+BattleScript_DebilSpeed::
+	setstatchanger STAT_SPEED, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_DebilSpAtk, BIT_SPATK | BIT_SPDEF | BIT_ACC | BIT_EVASION
+BattleScript_DebilSpAtk::
+	setstatchanger STAT_SPATK, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_DebilSpDef, BIT_SPDEF | BIT_ACC | BIT_EVASION
+BattleScript_DebilSpDef::
+	setstatchanger STAT_SPDEF, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_DebilAcc, BIT_ACC | BIT_EVASION
+BattleScript_DebilAcc::
+	setstatchanger STAT_ACC, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_DebilEva, BIT_EVASION
+BattleScript_DebilEva::
+	setstatchanger STAT_EVASION, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_DebilRet
+	printstring STRINGID_DEBILITATE
+BattleScript_DebilRet::
+	return
+
+BattleScript_MorningStar::
+	attackanimation
+	waitanimation
+	printstring STRINGID_MORNING_STAR
+	call BattleScript_RaSuTaCandy
+	goto BattleScript_MoveEnd
+
+BattleScript_DebilitateMove::
+	attackcanceler
+	attackanimation
+	waitanimation
+	call BattleScript_Debilitate
+	goto BattleScript_MoveEnd
+
+BattleScript_RaSuTaMove::
+	attackcanceler
+	attackanimation
+	waitanimation
+	call BattleScript_RaSuTaCandy
+	goto BattleScript_MoveEnd
+
+BattleScript_CripplingBlow::
+	attackcanceler
+	call BattleScript_AbilityPopUp
+	setstatchanger STAT_ACC, 1, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_CripplingRet
+	printfromtable gStatDownStringIds
+BattleScript_CripplingRet::
+	return

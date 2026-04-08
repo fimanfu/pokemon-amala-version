@@ -2778,6 +2778,13 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
             gBattlescriptCurrInstr = BattleScript_AllStatsUp;
         }
         break;
+    case MOVE_EFFECT_RASUTA_CANDY:
+        if (!NoAliveMonsForEitherParty())
+        {
+            BattleScriptPush(battleScript);
+            gBattlescriptCurrInstr = BattleScript_RaSuTaCandy;
+        }
+        break;
     case MOVE_EFFECT_ATK_DEF_DOWN: // SuperPower
         if (!NoAliveMonsForEitherParty())
         {

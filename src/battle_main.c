@@ -4859,7 +4859,10 @@ s32 GetBattleMovePriority(enum BattlerId battler, enum Ability ability, enum Mov
     {
         priority += 3;
     }
-
+    else if (ability == ABILITY_SOLEMN_VOW && IsHealingMove(move))
+    {
+        priority += 3;
+    }
     return priority;
 }
 

@@ -1689,8 +1689,42 @@
 #define SPECIES_GLIMMORA_MEGA                           1572
 // Megaten
 #define SPECIES_DEMIFIEND                               1573
+#define SPECIES_MATADOR                                 1574
+#define SPECIES_DAISOUJOU                               1575
+#define SPECIES_HELL_BIKER                              1576
+#define SPECIES_BLACK_RIDER                             1577
+#define SPECIES_WHITE_RIDER                             1578
+#define SPECIES_RED_RIDER                               1579
+#define SPECIES_PALE_RIDER                              1580
+#define SPECIES_MOTHER_HARLOT                           1581
+#define SPECIES_TRUMPETER                               1582
+#define SPECIES_PIXIE                                   1583
+#define SPECIES_JACK_FROST                              1584
+#define SPECIES_CERBERUS                                1585
+#define SPECIES_THOR                                    1586
+#define SPECIES_CU_CHULAINN                             1587
+#define SPECIES_PARVATI                                 1588
+#define SPECIES_GIRIMEKHALA                             1589
+#define SPECIES_NAAMAH                                  1590
+#define SPECIES_EISHETH                                 1591
+#define SPECIES_AGRAT                                   1592
+#define SPECIES_LILITH                                  1593
+#define SPECIES_SURT                                    1594
+#define SPECIES_KING_FROST                              1595
+#define SPECIES_JATAYU                                  1596
+#define SPECIES_SETH                                    1597
+#define SPECIES_DANU                                    1598
+#define SPECIES_ALICE                                   1599
+#define SPECIES_SIEGFRIED                               1600
+#define SPECIES_ZEUS                                    1601
+#define SPECIES_SHIVA                                   1602
+#define SPECIES_SANDALPHON                              1603
+#define SPECIES_KOHRYU                                  1604
+#define SPECIES_METATRON                                1605
+#define SPECIES_LUCIFER                                 1606
+#define SPECIES_MARA                                    1607
 
-#define SPECIES_EGG                                     (SPECIES_DEMIFIEND + 1)
+#define SPECIES_EGG                                     (SPECIES_MARA + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

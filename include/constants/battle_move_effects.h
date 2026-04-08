@@ -335,6 +335,10 @@ enum __attribute__((packed)) BattleMoveEffects
     EFFECT_STONE_AXE, // Not to be confused with MOVE_EFFECT_STEALTH_ROCK. They have two different activation timings.
     EFFECT_CEASELESS_EDGE, // Same applies to spikes
     EFFECT_SPECIES_POWER_OVERRIDE, // Uses argument field to for the species, power and (number of hits, used only for multi hit moves)
+    EFFECT_MEDIARAHAN,
+    EFFECT_MORNING_STAR,
+    EFFECT_RASUTA_CANDY,
+    EFFECT_DEBILITATE,
     NUM_BATTLE_MOVE_EFFECTS,
 };
 
