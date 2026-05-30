@@ -6,7 +6,7 @@
 // Discussion: https://github.com/rh-hideout/pokeemerald-expansion/pull/5075#issuecomment-2384088602
 // Showdown: https://github.com/smogon/Pokemon-Showdown/blob/master/data/pokedex.ts
 
-enum __attribute__((packed)) Species
+enum __attribute__((packed)) class Species
 {
     SPECIES_NONE = 0,
     SPECIES_BULBASAUR = 1,
@@ -360,7 +360,7 @@ enum __attribute__((packed)) Species
     SPECIES_FEEBAS = 349,
     SPECIES_MILOTIC = 350,
     SPECIES_CASTFORM_NORMAL = 351,
-    SPECIES_CASTFORM = SPECIES_CASTFORM_NORMAL,
+    SPECIES_CASTFORM = Species::SPECIES_CASTFORM_NORMAL,
     SPECIES_KECLEON = 352,
     SPECIES_SHUPPET = 353,
     SPECIES_BANETTE = 354,
@@ -396,7 +396,7 @@ enum __attribute__((packed)) Species
     SPECIES_RAYQUAZA = 384,
     SPECIES_JIRACHI = 385,
     SPECIES_DEOXYS_NORMAL = 386,
-    SPECIES_DEOXYS = SPECIES_DEOXYS_NORMAL,
+    SPECIES_DEOXYS = Species::SPECIES_DEOXYS_NORMAL,
     SPECIES_TURTWIG = 387,
     SPECIES_GROTLE = 388,
     SPECIES_TORTERRA = 389,
@@ -423,11 +423,11 @@ enum __attribute__((packed)) Species
     SPECIES_SHIELDON = 410,
     SPECIES_BASTIODON = 411,
     SPECIES_BURMY_PLANT = 412,
-    SPECIES_BURMY = SPECIES_BURMY_PLANT,
+    SPECIES_BURMY = Species::SPECIES_BURMY_PLANT,
     SPECIES_WORMADAM_PLANT = 413,
-    SPECIES_WORMADAM = SPECIES_WORMADAM_PLANT,
+    SPECIES_WORMADAM = Species::SPECIES_WORMADAM_PLANT,
     SPECIES_MOTHIM_PLANT = 414,
-    SPECIES_MOTHIM = SPECIES_MOTHIM_PLANT,
+    SPECIES_MOTHIM = Species::SPECIES_MOTHIM_PLANT,
     SPECIES_COMBEE = 415,
     SPECIES_VESPIQUEN = 416,
     SPECIES_PACHIRISU = 417,
@@ -435,11 +435,11 @@ enum __attribute__((packed)) Species
     SPECIES_FLOATZEL = 419,
     SPECIES_CHERUBI = 420,
     SPECIES_CHERRIM_OVERCAST = 421,
-    SPECIES_CHERRIM = SPECIES_CHERRIM_OVERCAST,
+    SPECIES_CHERRIM = Species::SPECIES_CHERRIM_OVERCAST,
     SPECIES_SHELLOS_WEST = 422,
-    SPECIES_SHELLOS = SPECIES_SHELLOS_WEST,
+    SPECIES_SHELLOS = Species::SPECIES_SHELLOS_WEST,
     SPECIES_GASTRODON_WEST = 423,
-    SPECIES_GASTRODON = SPECIES_GASTRODON_WEST,
+    SPECIES_GASTRODON = Species::SPECIES_GASTRODON_WEST,
     SPECIES_AMBIPOM = 424,
     SPECIES_DRIFLOON = 425,
     SPECIES_DRIFBLIM = 426,
@@ -504,15 +504,15 @@ enum __attribute__((packed)) Species
     SPECIES_HEATRAN = 485,
     SPECIES_REGIGIGAS = 486,
     SPECIES_GIRATINA_ALTERED = 487,
-    SPECIES_GIRATINA = SPECIES_GIRATINA_ALTERED,
+    SPECIES_GIRATINA = Species::SPECIES_GIRATINA_ALTERED,
     SPECIES_CRESSELIA = 488,
     SPECIES_PHIONE = 489,
     SPECIES_MANAPHY = 490,
     SPECIES_DARKRAI = 491,
     SPECIES_SHAYMIN_LAND = 492,
-    SPECIES_SHAYMIN = SPECIES_SHAYMIN_LAND,
+    SPECIES_SHAYMIN = Species::SPECIES_SHAYMIN_LAND,
     SPECIES_ARCEUS_NORMAL = 493,
-    SPECIES_ARCEUS = SPECIES_ARCEUS_NORMAL,
+    SPECIES_ARCEUS = Species::SPECIES_ARCEUS_NORMAL,
     SPECIES_VICTINI = 494,
     SPECIES_SNIVY = 495,
     SPECIES_SERVINE = 496,
@@ -570,13 +570,13 @@ enum __attribute__((packed)) Species
     SPECIES_PETILIL = 548,
     SPECIES_LILLIGANT = 549,
     SPECIES_BASCULIN_RED_STRIPED = 550,
-    SPECIES_BASCULIN = SPECIES_BASCULIN_RED_STRIPED,
+    SPECIES_BASCULIN = Species::SPECIES_BASCULIN_RED_STRIPED,
     SPECIES_SANDILE = 551,
     SPECIES_KROKOROK = 552,
     SPECIES_KROOKODILE = 553,
     SPECIES_DARUMAKA = 554,
     SPECIES_DARMANITAN_STANDARD = 555,
-    SPECIES_DARMANITAN = SPECIES_DARMANITAN_STANDARD,
+    SPECIES_DARMANITAN = Species::SPECIES_DARMANITAN_STANDARD,
     SPECIES_MARACTUS = 556,
     SPECIES_DWEBBLE = 557,
     SPECIES_CRUSTLE = 558,
@@ -607,9 +607,9 @@ enum __attribute__((packed)) Species
     SPECIES_VANILLISH = 583,
     SPECIES_VANILLUXE = 584,
     SPECIES_DEERLING_SPRING = 585,
-    SPECIES_DEERLING = SPECIES_DEERLING_SPRING,
+    SPECIES_DEERLING = Species::SPECIES_DEERLING_SPRING,
     SPECIES_SAWSBUCK_SPRING = 586,
-    SPECIES_SAWSBUCK = SPECIES_SAWSBUCK_SPRING,
+    SPECIES_SAWSBUCK = Species::SPECIES_SAWSBUCK_SPRING,
     SPECIES_EMOLGA = 587,
     SPECIES_KARRABLAST = 588,
     SPECIES_ESCAVALIER = 589,
@@ -665,18 +665,18 @@ enum __attribute__((packed)) Species
     SPECIES_TERRAKION = 639,
     SPECIES_VIRIZION = 640,
     SPECIES_TORNADUS_INCARNATE = 641,
-    SPECIES_TORNADUS = SPECIES_TORNADUS_INCARNATE,
+    SPECIES_TORNADUS = Species::SPECIES_TORNADUS_INCARNATE,
     SPECIES_THUNDURUS_INCARNATE = 642,
-    SPECIES_THUNDURUS = SPECIES_THUNDURUS_INCARNATE,
+    SPECIES_THUNDURUS = Species::SPECIES_THUNDURUS_INCARNATE,
     SPECIES_RESHIRAM = 643,
     SPECIES_ZEKROM = 644,
     SPECIES_LANDORUS_INCARNATE = 645,
-    SPECIES_LANDORUS = SPECIES_LANDORUS_INCARNATE,
+    SPECIES_LANDORUS = Species::SPECIES_LANDORUS_INCARNATE,
     SPECIES_KYUREM = 646,
     SPECIES_KELDEO_ORDINARY = 647,
-    SPECIES_KELDEO = SPECIES_KELDEO_ORDINARY,
+    SPECIES_KELDEO = Species::SPECIES_KELDEO_ORDINARY,
     SPECIES_MELOETTA_ARIA = 648,
-    SPECIES_MELOETTA = SPECIES_MELOETTA_ARIA,
+    SPECIES_MELOETTA = Species::SPECIES_MELOETTA_ARIA,
     SPECIES_GENESECT = 649,
     SPECIES_CHESPIN = 650,
     SPECIES_QUILLADIN = 651,
@@ -693,32 +693,32 @@ enum __attribute__((packed)) Species
     SPECIES_FLETCHINDER = 662,
     SPECIES_TALONFLAME = 663,
     SPECIES_SCATTERBUG_ICY_SNOW = 664,
-    SPECIES_SCATTERBUG = SPECIES_SCATTERBUG_ICY_SNOW,
+    SPECIES_SCATTERBUG = Species::SPECIES_SCATTERBUG_ICY_SNOW,
     SPECIES_SPEWPA_ICY_SNOW = 665,
-    SPECIES_SPEWPA = SPECIES_SPEWPA_ICY_SNOW,
+    SPECIES_SPEWPA = Species::SPECIES_SPEWPA_ICY_SNOW,
     SPECIES_VIVILLON_ICY_SNOW = 666,
-    SPECIES_VIVILLON = SPECIES_VIVILLON_ICY_SNOW,
+    SPECIES_VIVILLON = Species::SPECIES_VIVILLON_ICY_SNOW,
     SPECIES_LITLEO = 667,
     SPECIES_PYROAR = 668,
     SPECIES_FLABEBE_RED = 669,
-    SPECIES_FLABEBE = SPECIES_FLABEBE_RED,
+    SPECIES_FLABEBE = Species::SPECIES_FLABEBE_RED,
     SPECIES_FLOETTE_RED = 670,
-    SPECIES_FLOETTE = SPECIES_FLOETTE_RED,
+    SPECIES_FLOETTE = Species::SPECIES_FLOETTE_RED,
     SPECIES_FLORGES_RED = 671,
-    SPECIES_FLORGES = SPECIES_FLORGES_RED,
+    SPECIES_FLORGES = Species::SPECIES_FLORGES_RED,
     SPECIES_SKIDDO = 672,
     SPECIES_GOGOAT = 673,
     SPECIES_PANCHAM = 674,
     SPECIES_PANGORO = 675,
     SPECIES_FURFROU_NATURAL = 676,
-    SPECIES_FURFROU = SPECIES_FURFROU_NATURAL,
+    SPECIES_FURFROU = Species::SPECIES_FURFROU_NATURAL,
     SPECIES_ESPURR = 677,
     SPECIES_MEOWSTIC_M = 678,
-    SPECIES_MEOWSTIC = SPECIES_MEOWSTIC_M,
+    SPECIES_MEOWSTIC = Species::SPECIES_MEOWSTIC_M,
     SPECIES_HONEDGE = 679,
     SPECIES_DOUBLADE = 680,
     SPECIES_AEGISLASH_SHIELD = 681,
-    SPECIES_AEGISLASH = SPECIES_AEGISLASH_SHIELD,
+    SPECIES_AEGISLASH = Species::SPECIES_AEGISLASH_SHIELD,
     SPECIES_SPRITZEE = 682,
     SPECIES_AROMATISSE = 683,
     SPECIES_SWIRLIX = 684,
@@ -748,21 +748,21 @@ enum __attribute__((packed)) Species
     SPECIES_PHANTUMP = 708,
     SPECIES_TREVENANT = 709,
     SPECIES_PUMPKABOO_AVERAGE = 710,
-    SPECIES_PUMPKABOO = SPECIES_PUMPKABOO_AVERAGE,
+    SPECIES_PUMPKABOO = Species::SPECIES_PUMPKABOO_AVERAGE,
     SPECIES_GOURGEIST_AVERAGE = 711,
-    SPECIES_GOURGEIST = SPECIES_GOURGEIST_AVERAGE,
+    SPECIES_GOURGEIST = Species::SPECIES_GOURGEIST_AVERAGE,
     SPECIES_BERGMITE = 712,
     SPECIES_AVALUGG = 713,
     SPECIES_NOIBAT = 714,
     SPECIES_NOIVERN = 715,
     SPECIES_XERNEAS_NEUTRAL = 716,
-    SPECIES_XERNEAS = SPECIES_XERNEAS_NEUTRAL,
+    SPECIES_XERNEAS = Species::SPECIES_XERNEAS_NEUTRAL,
     SPECIES_YVELTAL = 717,
     SPECIES_ZYGARDE_50 = 718,
-    SPECIES_ZYGARDE = SPECIES_ZYGARDE_50,
+    SPECIES_ZYGARDE = Species::SPECIES_ZYGARDE_50,
     SPECIES_DIANCIE = 719,
     SPECIES_HOOPA_CONFINED = 720,
-    SPECIES_HOOPA = SPECIES_HOOPA_CONFINED,
+    SPECIES_HOOPA = Species::SPECIES_HOOPA_CONFINED,
     SPECIES_VOLCANION = 721,
     SPECIES_ROWLET = 722,
     SPECIES_DARTRIX = 723,
@@ -784,14 +784,14 @@ enum __attribute__((packed)) Species
     SPECIES_CRABRAWLER = 739,
     SPECIES_CRABOMINABLE = 740,
     SPECIES_ORICORIO_BAILE = 741,
-    SPECIES_ORICORIO = SPECIES_ORICORIO_BAILE,
+    SPECIES_ORICORIO = Species::SPECIES_ORICORIO_BAILE,
     SPECIES_CUTIEFLY = 742,
     SPECIES_RIBOMBEE = 743,
     SPECIES_ROCKRUFF = 744,
     SPECIES_LYCANROC_MIDDAY = 745,
-    SPECIES_LYCANROC = SPECIES_LYCANROC_MIDDAY,
+    SPECIES_LYCANROC = Species::SPECIES_LYCANROC_MIDDAY,
     SPECIES_WISHIWASHI_SOLO = 746,
-    SPECIES_WISHIWASHI = SPECIES_WISHIWASHI_SOLO,
+    SPECIES_WISHIWASHI = Species::SPECIES_WISHIWASHI_SOLO,
     SPECIES_MAREANIE = 747,
     SPECIES_TOXAPEX = 748,
     SPECIES_MUDBRAY = 749,
@@ -819,16 +819,16 @@ enum __attribute__((packed)) Species
     SPECIES_PYUKUMUKU = 771,
     SPECIES_TYPE_NULL = 772,
     SPECIES_SILVALLY_NORMAL = 773,
-    SPECIES_SILVALLY = SPECIES_SILVALLY_NORMAL,
+    SPECIES_SILVALLY = Species::SPECIES_SILVALLY_NORMAL,
     SPECIES_MINIOR_METEOR_RED = 774,
-    SPECIES_MINIOR_METEOR = SPECIES_MINIOR_METEOR_RED,
-    SPECIES_MINIOR = SPECIES_MINIOR_METEOR,
-    SPECIES_MINIOR_RED = SPECIES_MINIOR_METEOR_RED,
+    SPECIES_MINIOR_METEOR = Species::SPECIES_MINIOR_METEOR_RED,
+    SPECIES_MINIOR = Species::SPECIES_MINIOR_METEOR,
+    SPECIES_MINIOR_RED = Species::SPECIES_MINIOR_METEOR_RED,
     SPECIES_KOMALA = 775,
     SPECIES_TURTONATOR = 776,
     SPECIES_TOGEDEMARU = 777,
     SPECIES_MIMIKYU_DISGUISED = 778,
-    SPECIES_MIMIKYU = SPECIES_MIMIKYU_DISGUISED,
+    SPECIES_MIMIKYU = Species::SPECIES_MIMIKYU_DISGUISED,
     SPECIES_BRUXISH = 779,
     SPECIES_DRAMPA = 780,
     SPECIES_DHELMISE = 781,
@@ -900,15 +900,15 @@ enum __attribute__((packed)) Species
     SPECIES_BARRASKEWDA = 847,
     SPECIES_TOXEL = 848,
     SPECIES_TOXTRICITY_AMPED = 849,
-    SPECIES_TOXTRICITY = SPECIES_TOXTRICITY_AMPED,
+    SPECIES_TOXTRICITY = Species::SPECIES_TOXTRICITY_AMPED,
     SPECIES_SIZZLIPEDE = 850,
     SPECIES_CENTISKORCH = 851,
     SPECIES_CLOBBOPUS = 852,
     SPECIES_GRAPPLOCT = 853,
     SPECIES_SINISTEA_PHONY = 854,
-    SPECIES_SINISTEA = SPECIES_SINISTEA_PHONY,
+    SPECIES_SINISTEA = Species::SPECIES_SINISTEA_PHONY,
     SPECIES_POLTEAGEIST_PHONY = 855,
-    SPECIES_POLTEAGEIST = SPECIES_POLTEAGEIST_PHONY,
+    SPECIES_POLTEAGEIST = Species::SPECIES_POLTEAGEIST_PHONY,
     SPECIES_HATENNA = 856,
     SPECIES_HATTREM = 857,
     SPECIES_HATTERENE = 858,
@@ -923,20 +923,20 @@ enum __attribute__((packed)) Species
     SPECIES_RUNERIGUS = 867,
     SPECIES_MILCERY = 868,
     SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM = 869,
-    SPECIES_ALCREMIE_STRAWBERRY = SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM,
-    SPECIES_ALCREMIE = SPECIES_ALCREMIE_STRAWBERRY,
-    SPECIES_ALCREMIE_VANILLA_CREAM = SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM,
+    SPECIES_ALCREMIE_STRAWBERRY = Species::SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM,
+    SPECIES_ALCREMIE = Species::SPECIES_ALCREMIE_STRAWBERRY,
+    SPECIES_ALCREMIE_VANILLA_CREAM = Species::SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM,
     SPECIES_FALINKS = 870,
     SPECIES_PINCURCHIN = 871,
     SPECIES_SNOM = 872,
     SPECIES_FROSMOTH = 873,
     SPECIES_STONJOURNER = 874,
     SPECIES_EISCUE_ICE = 875,
-    SPECIES_EISCUE = SPECIES_EISCUE_ICE,
+    SPECIES_EISCUE = Species::SPECIES_EISCUE_ICE,
     SPECIES_INDEEDEE_M = 876,
-    SPECIES_INDEEDEE = SPECIES_INDEEDEE_M,
+    SPECIES_INDEEDEE = Species::SPECIES_INDEEDEE_M,
     SPECIES_MORPEKO_FULL_BELLY = 877,
-    SPECIES_MORPEKO = SPECIES_MORPEKO_FULL_BELLY,
+    SPECIES_MORPEKO = Species::SPECIES_MORPEKO_FULL_BELLY,
     SPECIES_CUFANT = 878,
     SPECIES_COPPERAJAH = 879,
     SPECIES_DRACOZOLT = 880,
@@ -948,13 +948,13 @@ enum __attribute__((packed)) Species
     SPECIES_DRAKLOAK = 886,
     SPECIES_DRAGAPULT = 887,
     SPECIES_ZACIAN_HERO = 888,
-    SPECIES_ZACIAN = SPECIES_ZACIAN_HERO,
+    SPECIES_ZACIAN = Species::SPECIES_ZACIAN_HERO,
     SPECIES_ZAMAZENTA_HERO = 889,
-    SPECIES_ZAMAZENTA = SPECIES_ZAMAZENTA_HERO,
+    SPECIES_ZAMAZENTA = Species::SPECIES_ZAMAZENTA_HERO,
     SPECIES_ETERNATUS = 890,
     SPECIES_KUBFU = 891,
     SPECIES_URSHIFU_SINGLE_STRIKE = 892,
-    SPECIES_URSHIFU = SPECIES_URSHIFU_SINGLE_STRIKE,
+    SPECIES_URSHIFU = Species::SPECIES_URSHIFU_SINGLE_STRIKE,
     SPECIES_ZARUDE = 893,
     SPECIES_REGIELEKI = 894,
     SPECIES_REGIDRAGO = 895,
@@ -965,11 +965,11 @@ enum __attribute__((packed)) Species
     SPECIES_KLEAVOR = 900,
     SPECIES_URSALUNA = 901,
     SPECIES_BASCULEGION_M = 902,
-    SPECIES_BASCULEGION = SPECIES_BASCULEGION_M,
+    SPECIES_BASCULEGION = Species::SPECIES_BASCULEGION_M,
     SPECIES_SNEASLER = 903,
     SPECIES_OVERQWIL = 904,
     SPECIES_ENAMORUS_INCARNATE = 905,
-    SPECIES_ENAMORUS = SPECIES_ENAMORUS_INCARNATE,
+    SPECIES_ENAMORUS = Species::SPECIES_ENAMORUS_INCARNATE,
     SPECIES_VENUSAUR_MEGA = 906,
     SPECIES_CHARIZARD_MEGA_X = 907,
     SPECIES_CHARIZARD_MEGA_Y = 908,
@@ -1055,7 +1055,7 @@ enum __attribute__((packed)) Species
     SPECIES_LINOONE_GALAR = 988,
     SPECIES_DARUMAKA_GALAR = 989,
     SPECIES_DARMANITAN_GALAR_STANDARD = 990,
-    SPECIES_DARMANITAN_GALAR = SPECIES_DARMANITAN_GALAR_STANDARD,
+    SPECIES_DARMANITAN_GALAR = Species::SPECIES_DARMANITAN_GALAR_STANDARD,
     SPECIES_YAMASK_GALAR = 991,
     SPECIES_STUNFISK_GALAR = 992,
 
@@ -1182,7 +1182,7 @@ enum __attribute__((packed)) Species
     SPECIES_GENESECT_BURN = 1110,
     SPECIES_GENESECT_CHILL = 1111,
     SPECIES_GRENINJA_BOND = 1112,
-    SPECIES_GRENINJA_BATTLE_BOND = SPECIES_GRENINJA_BOND,
+    SPECIES_GRENINJA_BATTLE_BOND = Species::SPECIES_GRENINJA_BOND,
     SPECIES_GRENINJA_ASH = 1113,
     SPECIES_VIVILLON_POLAR = 1114,
     SPECIES_VIVILLON_TUNDRA = 1115,
@@ -1235,7 +1235,7 @@ enum __attribute__((packed)) Species
     SPECIES_GOURGEIST_SUPER = 1162,
     SPECIES_XERNEAS_ACTIVE = 1163,
     SPECIES_ZYGARDE_10_AURA_BREAK = 1164,
-    SPECIES_ZYGARDE_10 = SPECIES_ZYGARDE_10_AURA_BREAK,
+    SPECIES_ZYGARDE_10 = Species::SPECIES_ZYGARDE_10_AURA_BREAK,
     SPECIES_ZYGARDE_10_POWER_CONSTRUCT = 1165,
     SPECIES_ZYGARDE_50_POWER_CONSTRUCT = 1166,
     SPECIES_ZYGARDE_COMPLETE = 1167,
@@ -1270,14 +1270,14 @@ enum __attribute__((packed)) Species
     SPECIES_MINIOR_METEOR_BLUE = 1196,
     SPECIES_MINIOR_METEOR_INDIGO = 1197,
     SPECIES_MINIOR_METEOR_VIOLET = 1198,
-    SPECIES_MINIOR_ORANGE = SPECIES_MINIOR_METEOR_ORANGE,
-    SPECIES_MINIOR_YELLOW = SPECIES_MINIOR_METEOR_YELLOW,
-    SPECIES_MINIOR_GREEN = SPECIES_MINIOR_METEOR_GREEN,
-    SPECIES_MINIOR_BLUE = SPECIES_MINIOR_METEOR_BLUE,
-    SPECIES_MINIOR_INDIGO = SPECIES_MINIOR_METEOR_INDIGO,
-    SPECIES_MINIOR_VIOLET = SPECIES_MINIOR_METEOR_VIOLET,
+    SPECIES_MINIOR_ORANGE = Species::SPECIES_MINIOR_METEOR_ORANGE,
+    SPECIES_MINIOR_YELLOW = Species::SPECIES_MINIOR_METEOR_YELLOW,
+    SPECIES_MINIOR_GREEN = Species::SPECIES_MINIOR_METEOR_GREEN,
+    SPECIES_MINIOR_BLUE = Species::SPECIES_MINIOR_METEOR_BLUE,
+    SPECIES_MINIOR_INDIGO = Species::SPECIES_MINIOR_METEOR_INDIGO,
+    SPECIES_MINIOR_VIOLET = Species::SPECIES_MINIOR_METEOR_VIOLET,
     SPECIES_MINIOR_CORE_RED = 1199,
-    SPECIES_MINIOR_CORE = SPECIES_MINIOR_CORE_RED,
+    SPECIES_MINIOR_CORE = Species::SPECIES_MINIOR_CORE_RED,
     SPECIES_MINIOR_CORE_ORANGE = 1200,
     SPECIES_MINIOR_CORE_YELLOW = 1201,
     SPECIES_MINIOR_CORE_GREEN = 1202,
@@ -1302,14 +1302,14 @@ enum __attribute__((packed)) Species
     SPECIES_ALCREMIE_STRAWBERRY_RUBY_SWIRL = 1221,
     SPECIES_ALCREMIE_STRAWBERRY_CARAMEL_SWIRL = 1222,
     SPECIES_ALCREMIE_STRAWBERRY_RAINBOW_SWIRL = 1223,
-    SPECIES_ALCREMIE_RUBY_CREAM = SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM,
-    SPECIES_ALCREMIE_MATCHA_CREAM = SPECIES_ALCREMIE_STRAWBERRY_MATCHA_CREAM,
-    SPECIES_ALCREMIE_MINT_CREAM = SPECIES_ALCREMIE_STRAWBERRY_MINT_CREAM,
-    SPECIES_ALCREMIE_LEMON_CREAM = SPECIES_ALCREMIE_STRAWBERRY_LEMON_CREAM,
-    SPECIES_ALCREMIE_SALTED_CREAM = SPECIES_ALCREMIE_STRAWBERRY_SALTED_CREAM,
-    SPECIES_ALCREMIE_RUBY_SWIRL = SPECIES_ALCREMIE_STRAWBERRY_RUBY_SWIRL,
-    SPECIES_ALCREMIE_CARAMEL_SWIRL = SPECIES_ALCREMIE_STRAWBERRY_CARAMEL_SWIRL,
-    SPECIES_ALCREMIE_RAINBOW_SWIRL = SPECIES_ALCREMIE_STRAWBERRY_RAINBOW_SWIRL,
+    SPECIES_ALCREMIE_RUBY_CREAM = Species::SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM,
+    SPECIES_ALCREMIE_MATCHA_CREAM = Species::SPECIES_ALCREMIE_STRAWBERRY_MATCHA_CREAM,
+    SPECIES_ALCREMIE_MINT_CREAM = Species::SPECIES_ALCREMIE_STRAWBERRY_MINT_CREAM,
+    SPECIES_ALCREMIE_LEMON_CREAM = Species::SPECIES_ALCREMIE_STRAWBERRY_LEMON_CREAM,
+    SPECIES_ALCREMIE_SALTED_CREAM = Species::SPECIES_ALCREMIE_STRAWBERRY_SALTED_CREAM,
+    SPECIES_ALCREMIE_RUBY_SWIRL = Species::SPECIES_ALCREMIE_STRAWBERRY_RUBY_SWIRL,
+    SPECIES_ALCREMIE_CARAMEL_SWIRL = Species::SPECIES_ALCREMIE_STRAWBERRY_CARAMEL_SWIRL,
+    SPECIES_ALCREMIE_RAINBOW_SWIRL = Species::SPECIES_ALCREMIE_STRAWBERRY_RAINBOW_SWIRL,
     SPECIES_EISCUE_NOICE = 1224,
     SPECIES_INDEEDEE_F = 1225,
     SPECIES_MORPEKO_HANGRY = 1226,
@@ -1322,7 +1322,7 @@ enum __attribute__((packed)) Species
     SPECIES_CALYREX_SHADOW = 1233,
     SPECIES_BASCULEGION_F = 1234,
     SPECIES_ALCREMIE_BERRY_VANILLA_CREAM = 1235,
-    SPECIES_ALCREMIE_BERRY = SPECIES_ALCREMIE_BERRY_VANILLA_CREAM,
+    SPECIES_ALCREMIE_BERRY = Species::SPECIES_ALCREMIE_BERRY_VANILLA_CREAM,
     SPECIES_ALCREMIE_BERRY_RUBY_CREAM = 1236,
     SPECIES_ALCREMIE_BERRY_MATCHA_CREAM = 1237,
     SPECIES_ALCREMIE_BERRY_MINT_CREAM = 1238,
@@ -1332,7 +1332,7 @@ enum __attribute__((packed)) Species
     SPECIES_ALCREMIE_BERRY_CARAMEL_SWIRL = 1242,
     SPECIES_ALCREMIE_BERRY_RAINBOW_SWIRL = 1243,
     SPECIES_ALCREMIE_LOVE_VANILLA_CREAM = 1244,
-    SPECIES_ALCREMIE_LOVE = SPECIES_ALCREMIE_LOVE_VANILLA_CREAM,
+    SPECIES_ALCREMIE_LOVE = Species::SPECIES_ALCREMIE_LOVE_VANILLA_CREAM,
     SPECIES_ALCREMIE_LOVE_RUBY_CREAM = 1245,
     SPECIES_ALCREMIE_LOVE_MATCHA_CREAM = 1246,
     SPECIES_ALCREMIE_LOVE_MINT_CREAM = 1247,
@@ -1342,7 +1342,7 @@ enum __attribute__((packed)) Species
     SPECIES_ALCREMIE_LOVE_CARAMEL_SWIRL = 1251,
     SPECIES_ALCREMIE_LOVE_RAINBOW_SWIRL = 1252,
     SPECIES_ALCREMIE_STAR_VANILLA_CREAM = 1253,
-    SPECIES_ALCREMIE_STAR = SPECIES_ALCREMIE_STAR_VANILLA_CREAM,
+    SPECIES_ALCREMIE_STAR = Species::SPECIES_ALCREMIE_STAR_VANILLA_CREAM,
     SPECIES_ALCREMIE_STAR_RUBY_CREAM = 1254,
     SPECIES_ALCREMIE_STAR_MATCHA_CREAM = 1255,
     SPECIES_ALCREMIE_STAR_MINT_CREAM = 1256,
@@ -1352,7 +1352,7 @@ enum __attribute__((packed)) Species
     SPECIES_ALCREMIE_STAR_CARAMEL_SWIRL = 1260,
     SPECIES_ALCREMIE_STAR_RAINBOW_SWIRL = 1261,
     SPECIES_ALCREMIE_CLOVER_VANILLA_CREAM = 1262,
-    SPECIES_ALCREMIE_CLOVER = SPECIES_ALCREMIE_CLOVER_VANILLA_CREAM,
+    SPECIES_ALCREMIE_CLOVER = Species::SPECIES_ALCREMIE_CLOVER_VANILLA_CREAM,
     SPECIES_ALCREMIE_CLOVER_RUBY_CREAM = 1263,
     SPECIES_ALCREMIE_CLOVER_MATCHA_CREAM = 1264,
     SPECIES_ALCREMIE_CLOVER_MINT_CREAM = 1265,
@@ -1362,7 +1362,7 @@ enum __attribute__((packed)) Species
     SPECIES_ALCREMIE_CLOVER_CARAMEL_SWIRL = 1269,
     SPECIES_ALCREMIE_CLOVER_RAINBOW_SWIRL = 1270,
     SPECIES_ALCREMIE_FLOWER_VANILLA_CREAM = 1271,
-    SPECIES_ALCREMIE_FLOWER = SPECIES_ALCREMIE_FLOWER_VANILLA_CREAM,
+    SPECIES_ALCREMIE_FLOWER = Species::SPECIES_ALCREMIE_FLOWER_VANILLA_CREAM,
     SPECIES_ALCREMIE_FLOWER_RUBY_CREAM = 1272,
     SPECIES_ALCREMIE_FLOWER_MATCHA_CREAM = 1273,
     SPECIES_ALCREMIE_FLOWER_MINT_CREAM = 1274,
@@ -1372,7 +1372,7 @@ enum __attribute__((packed)) Species
     SPECIES_ALCREMIE_FLOWER_CARAMEL_SWIRL = 1278,
     SPECIES_ALCREMIE_FLOWER_RAINBOW_SWIRL = 1279,
     SPECIES_ALCREMIE_RIBBON_VANILLA_CREAM = 1280,
-    SPECIES_ALCREMIE_RIBBON = SPECIES_ALCREMIE_RIBBON_VANILLA_CREAM,
+    SPECIES_ALCREMIE_RIBBON = Species::SPECIES_ALCREMIE_RIBBON_VANILLA_CREAM,
     SPECIES_ALCREMIE_RIBBON_RUBY_CREAM = 1281,
     SPECIES_ALCREMIE_RIBBON_MATCHA_CREAM = 1282,
     SPECIES_ALCREMIE_RIBBON_MINT_CREAM = 1283,
@@ -1382,7 +1382,7 @@ enum __attribute__((packed)) Species
     SPECIES_ALCREMIE_RIBBON_CARAMEL_SWIRL = 1287,
     SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL = 1288,
 
-    GEN9_START = SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL,
+    GEN9_START = Species::SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL,
 
     SPECIES_SPRIGATITO = 1289,
     SPECIES_FLORAGATO = 1290,
@@ -1395,7 +1395,7 @@ enum __attribute__((packed)) Species
     SPECIES_QUAQUAVAL = 1297,
     SPECIES_LECHONK = 1298,
     SPECIES_OINKOLOGNE_M = 1299,
-    SPECIES_OINKOLOGNE = SPECIES_OINKOLOGNE_M,
+    SPECIES_OINKOLOGNE = Species::SPECIES_OINKOLOGNE_M,
     SPECIES_OINKOLOGNE_F = 1300,
     SPECIES_TAROUNTULA = 1301,
     SPECIES_SPIDOPS = 1302,
@@ -1406,7 +1406,7 @@ enum __attribute__((packed)) Species
     SPECIES_PAWMOT = 1307,
     SPECIES_TANDEMAUS = 1308,
     SPECIES_MAUSHOLD_THREE = 1309,
-    SPECIES_MAUSHOLD = SPECIES_MAUSHOLD_THREE,
+    SPECIES_MAUSHOLD = Species::SPECIES_MAUSHOLD_THREE,
     SPECIES_MAUSHOLD_FOUR = 1310,
     SPECIES_FIDOUGH = 1311,
     SPECIES_DACHSBUN = 1312,
@@ -1414,7 +1414,7 @@ enum __attribute__((packed)) Species
     SPECIES_DOLLIV = 1314,
     SPECIES_ARBOLIVA = 1315,
     SPECIES_SQUAWKABILLY_GREEN = 1316,
-    SPECIES_SQUAWKABILLY = SPECIES_SQUAWKABILLY_GREEN,
+    SPECIES_SQUAWKABILLY = Species::SPECIES_SQUAWKABILLY_GREEN,
     SPECIES_SQUAWKABILLY_BLUE = 1317,
     SPECIES_SQUAWKABILLY_YELLOW = 1318,
     SPECIES_SQUAWKABILLY_WHITE = 1319,
@@ -1451,7 +1451,7 @@ enum __attribute__((packed)) Species
     SPECIES_BOMBIRDIER = 1350,
     SPECIES_FINIZEN = 1351,
     SPECIES_PALAFIN_ZERO = 1352,
-    SPECIES_PALAFIN = SPECIES_PALAFIN_ZERO,
+    SPECIES_PALAFIN = Species::SPECIES_PALAFIN_ZERO,
     SPECIES_PALAFIN_HERO = 1353,
     SPECIES_VAROOM = 1354,
     SPECIES_REVAVROOM = 1355,
@@ -1467,14 +1467,14 @@ enum __attribute__((packed)) Species
     SPECIES_VELUZA = 1365,
     SPECIES_DONDOZO = 1366,
     SPECIES_TATSUGIRI_CURLY = 1367,
-    SPECIES_TATSUGIRI = SPECIES_TATSUGIRI_CURLY,
+    SPECIES_TATSUGIRI = Species::SPECIES_TATSUGIRI_CURLY,
     SPECIES_TATSUGIRI_DROOPY = 1368,
     SPECIES_TATSUGIRI_STRETCHY = 1369,
     SPECIES_ANNIHILAPE = 1370,
     SPECIES_CLODSIRE = 1371,
     SPECIES_FARIGIRAF = 1372,
     SPECIES_DUDUNSPARCE_TWO_SEGMENT = 1373,
-    SPECIES_DUDUNSPARCE = SPECIES_DUDUNSPARCE_TWO_SEGMENT,
+    SPECIES_DUDUNSPARCE = Species::SPECIES_DUDUNSPARCE_TWO_SEGMENT,
     SPECIES_DUDUNSPARCE_THREE_SEGMENT = 1374,
     SPECIES_KINGAMBIT = 1375,
     SPECIES_GREAT_TUSK = 1376,
@@ -1493,7 +1493,7 @@ enum __attribute__((packed)) Species
     SPECIES_ARCTIBAX = 1389,
     SPECIES_BAXCALIBUR = 1390,
     SPECIES_GIMMIGHOUL_CHEST = 1391,
-    SPECIES_GIMMIGHOUL = SPECIES_GIMMIGHOUL_CHEST,
+    SPECIES_GIMMIGHOUL = Species::SPECIES_GIMMIGHOUL_CHEST,
     SPECIES_GIMMIGHOUL_ROAMING = 1392,
     SPECIES_GHOLDENGO = 1393,
     SPECIES_WO_CHIEN = 1394,
@@ -1515,16 +1515,16 @@ enum __attribute__((packed)) Species
     // Teal Mask
     SPECIES_DIPPLIN = 1408,
     SPECIES_POLTCHAGEIST_COUNTERFEIT = 1409,
-    SPECIES_POLTCHAGEIST = SPECIES_POLTCHAGEIST_COUNTERFEIT,
+    SPECIES_POLTCHAGEIST = Species::SPECIES_POLTCHAGEIST_COUNTERFEIT,
     SPECIES_POLTCHAGEIST_ARTISAN = 1410,
     SPECIES_SINISTCHA_UNREMARKABLE = 1411,
-    SPECIES_SINISTCHA = SPECIES_SINISTCHA_UNREMARKABLE,
+    SPECIES_SINISTCHA = Species::SPECIES_SINISTCHA_UNREMARKABLE,
     SPECIES_SINISTCHA_MASTERPIECE = 1412,
     SPECIES_OKIDOGI = 1413,
     SPECIES_MUNKIDORI = 1414,
     SPECIES_FEZANDIPITI = 1415,
     SPECIES_OGERPON_TEAL = 1416,
-    SPECIES_OGERPON = SPECIES_OGERPON_TEAL,
+    SPECIES_OGERPON = Species::SPECIES_OGERPON_TEAL,
     SPECIES_OGERPON_WELLSPRING = 1417,
     SPECIES_OGERPON_HEARTHFLAME = 1418,
     SPECIES_OGERPON_CORNERSTONE = 1419,
@@ -1541,7 +1541,7 @@ enum __attribute__((packed)) Species
     SPECIES_IRON_BOULDER = 1429,
     SPECIES_IRON_CROWN = 1430,
     SPECIES_TERAPAGOS_NORMAL = 1431,
-    SPECIES_TERAPAGOS = SPECIES_TERAPAGOS_NORMAL,
+    SPECIES_TERAPAGOS = Species::SPECIES_TERAPAGOS_NORMAL,
     SPECIES_TERAPAGOS_TERASTAL = 1432,
     SPECIES_TERAPAGOS_STELLAR = 1433,
     SPECIES_PECHARUNT = 1434,
@@ -1592,7 +1592,7 @@ enum __attribute__((packed)) Species
     SPECIES_LURANTIS_TOTEM = 1479,
     SPECIES_SALAZZLE_TOTEM = 1480,
     SPECIES_MIMIKYU_TOTEM_DISGUISED = 1481,
-    SPECIES_MIMIKYU_TOTEM = SPECIES_MIMIKYU_TOTEM_DISGUISED,
+    SPECIES_MIMIKYU_TOTEM = Species::SPECIES_MIMIKYU_TOTEM_DISGUISED,
     SPECIES_KOMMO_O_TOTEM = 1482,
     SPECIES_MAROWAK_ALOLA_TOTEM = 1483,
     SPECIES_RIBOMBEE_TOTEM = 1484,
@@ -1633,12 +1633,12 @@ enum __attribute__((packed)) Species
     SPECIES_COPPERAJAH_GMAX = 1519,
     SPECIES_DURALUDON_GMAX = 1520,
     SPECIES_URSHIFU_SINGLE_STRIKE_GMAX = 1521,
-    SPECIES_URSHIFU_GMAX = SPECIES_URSHIFU_SINGLE_STRIKE_GMAX,
-    SPECIES_URSHIFU_SINGLE_STRIKE_STYLE_GMAX = SPECIES_URSHIFU_SINGLE_STRIKE_GMAX,
+    SPECIES_URSHIFU_GMAX = Species::SPECIES_URSHIFU_SINGLE_STRIKE_GMAX,
+    SPECIES_URSHIFU_SINGLE_STRIKE_STYLE_GMAX = Species::SPECIES_URSHIFU_SINGLE_STRIKE_GMAX,
     SPECIES_URSHIFU_RAPID_STRIKE_GMAX = 1522,
-    SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GMAX = SPECIES_URSHIFU_RAPID_STRIKE_GMAX,
+    SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GMAX = Species::SPECIES_URSHIFU_RAPID_STRIKE_GMAX,
     SPECIES_MIMIKYU_BUSTED_TOTEM = 1523,
-    SPECIES_MIMIKYU_TOTEM_BUSTED = SPECIES_MIMIKYU_BUSTED_TOTEM,
+    SPECIES_MIMIKYU_TOTEM_BUSTED = Species::SPECIES_MIMIKYU_BUSTED_TOTEM,
     // Legends Z-A
     SPECIES_CLEFABLE_MEGA = 1524,
     SPECIES_VICTREEBEL_MEGA = 1525,
@@ -1690,162 +1690,162 @@ enum __attribute__((packed)) Species
     SPECIES_TATSUGIRI_STRETCHY_MEGA = 1571,
     SPECIES_GLIMMORA_MEGA = 1572,
 
-    SPECIES_CUSTOM_START = SPECIES_GLIMMORA_MEGA,
+    SPECIES_CUSTOM_START = Species::SPECIES_GLIMMORA_MEGA,
     // Add any custom species between here and SPECIES_CUSTOM_END
-    #define SPECIES_DEMIFIEND                               1573
-#define SPECIES_MATADOR                                 1574
-#define SPECIES_DAISOUJOU                               1575
-#define SPECIES_HELL_BIKER                              1576
-#define SPECIES_BLACK_RIDER                             1577
-#define SPECIES_WHITE_RIDER                             1578
-#define SPECIES_RED_RIDER                               1579
-#define SPECIES_PALE_RIDER                              1580
-#define SPECIES_MOTHER_HARLOT                           1581
-#define SPECIES_TRUMPETER                               1582
-#define SPECIES_PIXIE_DF                                1583
-#define SPECIES_JACK_FROST_DF                           1584
-#define SPECIES_CERBERUS_DF                             1585
-#define SPECIES_THOR_DF                                 1586
-#define SPECIES_CU_CHULAINN_DF                          1587
-#define SPECIES_PARVATI_DF                              1588
-#define SPECIES_GIRIMEKHALA_DF                          1589
-#define SPECIES_NAAMAH                                  1590
-#define SPECIES_EISHETH                                 1591
-#define SPECIES_AGRAT                                   1592
-#define SPECIES_LILITH                                  1593
-#define SPECIES_SURT                                    1594
-#define SPECIES_KING_FROST                              1595
-#define SPECIES_JATAYU                                  1596
-#define SPECIES_SETH                                    1597
-#define SPECIES_DANU                                    1598
-#define SPECIES_ALICE                                   1599
-#define SPECIES_SIEGFRIED                               1600
-#define SPECIES_ZEUS                                    1601
-#define SPECIES_SHIVA                                   1602
-#define SPECIES_SANDALPHON                              1603
-#define SPECIES_KOHRYU                                  1604
-#define SPECIES_METATRON                                1605
-#define SPECIES_LUCIFER                                 1606
-#define SPECIES_MARA                                    1607
-#define SPECIES_NEKOMATA                                1608
-#define SPECIES_AZUMI                                   1609
-#define SPECIES_URIEL                                   1610                                                                                                                                        
-#define SPECIES_RAPHAEL                                 1611                                                                                                    
-#define SPECIES_GABRIEL                                 1612                                                                                                    
-#define SPECIES_MICHAEL                                 1613                                                                                                    
-#define SPECIES_SUSANOO                                 1614                                                                                                    
-#define SPECIES_KONOHANA_SAKUYA                         1615                                                                                                            
-#define SPECIES_BLACK_FROST                             1616                                                                                                        
-#define SPECIES_ODIN                                    1617                                                                                                    
-#define SPECIES_BELIAL                                  1618                                                                                                    
-#define SPECIES_LUCIFUGE                                1619                                                                                                        
-#define SPECIES_BEELZEBUB                               1620                                                                                                       
-#define SPECIES_BELBERITH                               1621                                                                                                       
-#define SPECIES_JEZEBEL                                 1622                                                                                                    
-#define SPECIES_GRENINJA_KAGOME                         1623                                                                                                            
-#define SPECIES_NAHOBINO                                1624                                                                                                        
-#define SPECIES_NAHOBEEHO                               1625                                                                                                        
-#define SPECIES_PYRO_JACK                               1626                                                                                                        
-#define SPECIES_NAPAEA                                  1627                                                                                                    
-#define SPECIES_MINOTAUR                                1628                                                                                                        
-#define SPECIES_BAPHOMET                                1629                                                                                                        
-#define SPECIES_VIRTUE                                  1630                                                                                                    
-#define SPECIES_THRONE                                  1631                                                                                                    
-#define SPECIES_LOA                                     1632                                                                                                    
-#define SPECIES_DAGDA                                   1633                                                                                                    
-#define SPECIES_MASTEMA                                 1634                                                                                                    
-#define SPECIES_YURLUNGUR                               1635                                                                                                        
-#define SPECIES_POWER                                   1636                                                                                                    
-#define SPECIES_ANGEL                                   1637                                                                                                    
-#define SPECIES_MELCHIZEDEK                             1638                                                                                                        
-#define SPECIES_NAGA                                    1639                                                                                                    
-#define SPECIES_MEDUSA                                  1640                                                                                                    
-#define SPECIES_SATAN_BLUE                              1641                                                                                                        
-#define SPECIES_FROST_ACE                               1642                                                                                                        
-#define SPECIES_DEMONEEHO                               1643                                                                                                        
-#define SPECIES_ARAHABAKI                               1644                                                                                                        
-#define SPECIES_MERMAID                                 1645                                                                                                    
-#define SPECIES_CLEOPATRA                               1646                                                                                                        
-#define SPECIES_OBERON                                  1647                                                                                                    
-#define SPECIES_TITANIA                                 1648                                                                                                    
-#define SPECIES_HIGH_PIXIE                              1649                                                                                                        
-#define SPECIES_SCATHACH                                1650                                                                                                       
-#define SPECIES_MASAKADO_IV                             1651                                                                                                        
-#define SPECIES_TAIRA_NO_MASAKADO                       1652                                                                                                                
-#define SPECIES_JIKOKUTEN                               1653                                                                                                        
-#define SPECIES_KOMOKUTEN                               1654                                                                                                        
-#define SPECIES_BISHAMONTEN                             1655                                                                                                        
-#define SPECIES_ZOUCHOUTEN                              1656                                                                                                        
-#define SPECIES_ZHEN                                    1657                                                                                                    
-#define SPECIES_ZHU_TUN_SHE                             1658                                                                                                        
-#define SPECIES_YATAGARASU                              1659                                                                                                        
-#define SPECIES_WENDIGO                                 1660                                                                                                    
-#define SPECIES_VISHNU                                  1661                                                                                                    
-#define SPECIES_VASUKI                                  1662                                                                                                    
-#define SPECIES_THUNDERBIRD                             1663                                                                                                        
-#define SPECIES_MOTHMAN                                 1664                                                                                                    
-#define SPECIES_THOTH                                   1665                                                                                                    
-#define SPECIES_TAKE_MINAKATA                           1666                                                                                                            
-#define SPECIES_SLIME                                   1667                                                                                                    
-#define SPECIES_SRAOSHA                                 1668                                                                                                    
-#define SPECIES_SILKY                                   1669                                                                                                    
-#define SPECIES_SANDMAN                                 1670                                                                                                    
-#define SPECIES_SAMAEL                                  1671                                                                                                    
-#define SPECIES_RANGDA                                  1672                                                                                                    
-#define SPECIES_BARONG                                  1673                                                                                                    
-#define SPECIES_PRETA                                   1674                                                                                                    
-#define SPECIES_PISACA                                  1675                                                                                                    
-#define SPECIES_PEALLAIDH                               1676                                                                                                        
-#define SPECIES_OSE                                     1677                                                                                                
-#define SPECIES_OUROBOROS                               1678                                                                                                        
-#define SPECIES_OROCHI                                  1679                                                                                                    
-#define SPECIES_ORTHRUS                                 1680                                                                                                    
-#define SPECIES_ONI                                     1681                                                                                                
-#define SPECIES_ONGYO_KI                                1682                                                                                                        
-#define SPECIES_KIN_KI                                  1683                                                                                                    
-#define SPECIES_FUU_KI                                  1684                                                                                                    
-#define SPECIES_SUI_KI                                  1685                                                                                                    
-#define SPECIES_NORN                                    1686                                                                                                    
-#define SPECIES_CLOTHO                                  1687                                                                                                    
-#define SPECIES_ATROPOS                                 1688                                                                                                    
-#define SPECIES_LACHESIS                                1689                                                                                                        
-#define SPECIES_AME_NO_UZUME                            1690                                                                                                            
-#define SPECIES_ALILAT                                  1691                                                                                                    
-#define SPECIES_OKUNINUSHI                              1692 
-#define SPECIES_BALDUR                                  1693  
-#define SPECIES_PIXIE                                   1583
-#define SPECIES_JACK_FROST                              1584
-#define SPECIES_CERBERUS                                1585
-#define SPECIES_THOR                                    1586
-#define SPECIES_CU_CHULAINN                             1587
-#define SPECIES_PARVATI                                 1588
-#define SPECIES_GIRIMEKHALA                             1589
-#define SPECIES_SETANTA                                 1590
-#define SPECIES_KAIWAN                                  1591
-#define SPECIES_DECARABRIA                              1592
-#define SPECIES_TAOTIE                                  1593
-#define SPECIES_NYAMI_NYAMI                             1594
-#define SPECIES_MEPHISTO                                1595
-#define SPECIES_HALPHAS                                 1596
-#define SPECIES_MOMONOFU                                1597
-#define SPECIES_TURDAK                                  1598
-#define SPECIES_SATAN_IV                                1599
-#define SPECIES_FORNEUS                                 1600
-#define SPECIES_NIDHOGGR                                1601
-#define SPECIES_SKADI                                   1602
-#define SPECIES_HORUS                                   1603
-#define SPECIES_KRISHNA                                 1604
-#define SPECIES_LEGION                                  1605
-#define SPECIES_KURAMA_TENGU                            1606
-#define SPECIES_INCUBUS                                 1607
-#define SPECIES_DEMETER                                 1608
-#define SPECIES_MANDRAKE                                1609
+    SPECIES_DEMIFIEND = 1573,
+    SPECIES_MATADOR = 1574,
+    SPECIES_DAISOUJOU = 1575,
+    SPECIES_HELL_BIKER = 1576,
+    SPECIES_BLACK_RIDER = 1577,
+    SPECIES_WHITE_RIDER = 1578,
+    SPECIES_RED_RIDER = 1579,
+    SPECIES_PALE_RIDER = 1580,
+    SPECIES_MOTHER_HARLOT = 1581,
+    SPECIES_TRUMPETER = 1582,
+    SPECIES_PIXIE_DF = 1583,
+    SPECIES_JACK_FROST_DF = 1584,
+    SPECIES_CERBERUS_DF = 1585,
+    SPECIES_THOR_DF = 1586,
+    SPECIES_CU_CHULAINN_DF = 1587,
+    SPECIES_PARVATI_DF = 1588,
+    SPECIES_GIRIMEKHALA_DF = 1589,
+    SPECIES_NAAMAH = 1590,
+    SPECIES_EISHETH = 1591,
+    SPECIES_AGRAT = 1592,
+    SPECIES_LILITH = 1593,
+    SPECIES_SURT = 1594,
+    SPECIES_KING_FROST = 1595,
+    SPECIES_JATAYU = 1596,
+    SPECIES_SETH = 1597,
+    SPECIES_DANU = 1598,
+    SPECIES_ALICE = 1599,
+    SPECIES_SIEGFRIED = 1600,
+    SPECIES_ZEUS = 1601,
+    SPECIES_SHIVA = 1602,
+    SPECIES_SANDALPHON = 1603,
+    SPECIES_KOHRYU = 1604,
+    SPECIES_METATRON = 1605,
+    SPECIES_LUCIFER = 1606,
+    SPECIES_MARA = 1607,
+    SPECIES_NEKOMATA = 1608,
+    SPECIES_AZUMI = 1609,
+    SPECIES_URIEL = 1610,
+    SPECIES_RAPHAEL = 1611,
+    SPECIES_GABRIEL = 1612,
+    SPECIES_MICHAEL = 1613,
+    SPECIES_SUSANOO = 1614,
+    SPECIES_KONOHANA_SAKUYA = 1615,
+    SPECIES_BLACK_FROST = 1616,
+    SPECIES_ODIN = 1617,
+    SPECIES_BELIAL = 1618,
+    SPECIES_LUCIFUGE = 1619,
+    SPECIES_BEELZEBUB = 1620,
+    SPECIES_BELBERITH = 1621,
+    SPECIES_JEZEBEL = 1622,
+    SPECIES_GRENINJA_KAGOME = 1623,
+    SPECIES_NAHOBINO = 1624,
+    SPECIES_NAHOBEEHO = 1625,
+    SPECIES_PYRO_JACK = 1626,
+    SPECIES_NAPAEA = 1627,
+    SPECIES_MINOTAUR = 1628,
+    SPECIES_BAPHOMET = 1629,
+    SPECIES_VIRTUE = 1630,
+    SPECIES_THRONE = 1631,
+    SPECIES_LOA = 1632,
+    SPECIES_DAGDA = 1633,
+    SPECIES_MASTEMA = 1634,
+    SPECIES_YURLUNGUR = 1635,
+    SPECIES_POWER = 1636,
+    SPECIES_ANGEL = 1637,
+    SPECIES_MELCHIZEDEK = 1638,
+    SPECIES_NAGA = 1639,
+    SPECIES_MEDUSA = 1640,                                                                                                    
+    SPECIES_SATAN_BLUE = 1641,                                                                                                        
+    SPECIES_FROST_ACE = 1642,                                                                                                        
+    SPECIES_DEMONEEHO = 1643,                                                                                                        
+    SPECIES_ARAHABAKI = 1644,
+    SPECIES_MERMAID = 1645,
+    SPECIES_CLEOPATRA = 1646,
+    SPECIES_OBERON = 1647,
+    SPECIES_TITANIA = 1648,
+    SPECIES_HIGH_PIXIE = 1649,
+    SPECIES_SCATHACH = 1650,
+    SPECIES_MASAKADO_IV = 1651,
+    SPECIES_TAIRA_NO_MASAKADO = 1652,
+    SPECIES_JIKOKUTEN = 1653,
+    SPECIES_KOMOKUTEN = 1654,
+    SPECIES_BISHAMONTEN = 1655,
+    SPECIES_ZOUCHOUTEN = 1656,
+    SPECIES_ZHEN = 1657,
+    SPECIES_ZHU_TUN_SHE = 1658,
+    SPECIES_YATAGARASU = 1659,
+    SPECIES_WENDIGO = 1660,
+    SPECIES_VISHNU = 1661,
+    SPECIES_VASUKI = 1662,
+    SPECIES_THUNDERBIRD = 1663,
+    SPECIES_MOTHMAN = 1664,
+    SPECIES_THOTH = 1665,
+    SPECIES_TAKE_MINAKATA = 1666,
+    SPECIES_SLIME = 1667,
+    SPECIES_SRAOSHA = 1668,
+    SPECIES_SILKY = 1669,
+    SPECIES_SANDMAN = 1670,
+    SPECIES_SAMAEL = 1671,
+    SPECIES_RANGDA = 1672,
+    SPECIES_BARONG = 1673,
+    SPECIES_PRETA = 1674,
+    SPECIES_PISACA = 1675,
+    SPECIES_PEALLAIDH = 1676,
+    SPECIES_OSE = 1677,
+    SPECIES_OUROBOROS = 1678,
+    SPECIES_OROCHI = 1679,
+    SPECIES_ORTHRUS = 1680,
+    SPECIES_ONI = 1681,
+    SPECIES_ONGYO_KI = 1682,
+    SPECIES_KIN_KI = 1683,
+    SPECIES_FUU_KI = 1684,
+    SPECIES_SUI_KI = 1685,
+    SPECIES_NORN = 1686,
+    SPECIES_CLOTHO = 1687,
+    SPECIES_ATROPOS = 1688,
+    SPECIES_LACHESIS = 1689,
+    SPECIES_AME_NO_UZUME = 1690,
+    SPECIES_ALILAT = 1691,
+    SPECIES_OKUNINUSHI = 1692,
+    SPECIES_BALDUR = 1693,
+    SPECIES_PIXIE = 1583,
+    SPECIES_JACK_FROST = 1584,
+    SPECIES_CERBERUS = 1585,
+    SPECIES_THOR = 1586,
+    SPECIES_CU_CHULAINN = 1587,
+    SPECIES_PARVATI = 1588,
+    SPECIES_GIRIMEKHALA = 1589,
+    SPECIES_SETANTA = 1590,
+    SPECIES_KAIWAN = 1591,
+    SPECIES_DECARABRIA = 1592,
+    SPECIES_TAOTIE = 1593,
+    SPECIES_NYAMI_NYAMI = 1594,
+    SPECIES_MEPHISTO = 1595,
+    SPECIES_HALPHAS = 1596,
+    SPECIES_MOMONOFU = 1597,
+    SPECIES_TURDAK = 1598,
+    SPECIES_SATAN_IV = 1599,
+    SPECIES_FORNEUS = 1600,
+    SPECIES_NIDHOGGR = 1601,
+    SPECIES_SKADI = 1602,
+    SPECIES_HORUS = 1603,
+    SPECIES_KRISHNA = 1604,
+    SPECIES_LEGION = 1605,
+    SPECIES_KURAMA_TENGU = 1606,
+    SPECIES_INCUBUS = 1607,
+    SPECIES_DEMETER = 1608,
+    SPECIES_MANDRAKE = 1609,
     SPECIES_CUSTOM_END,
 
-    SPECIES_EGG = SPECIES_CUSTOM_END,
-    NUM_SPECIES = SPECIES_EGG,
+    SPECIES_EGG = Species::SPECIES_CUSTOM_END,
+    NUM_SPECIES = Species::SPECIES_EGG,
 };
 
-#define SPECIES_SHINY_TAG 5000
+ SPECIES_SHINY_TAG 5000
 
 #endif  // GUARD_CONSTANTS_SPECIES_H
