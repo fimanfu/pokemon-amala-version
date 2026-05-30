@@ -36585,64 +36585,64 @@
             "encounter_rate": 7,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_EKANS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_TRAPINCH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_EKANS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 3,
+                "max_level": 4,
                 "species": "SPECIES_SPEAROW"
               },
               {
-                "min_level": 5,
+                "min_level": 3,
+                "max_level": 4,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 3,
+                "max_level": 5,
+                "species": "SPECIES_ELECTRIKE"
+              },
+              {
+                "min_level": 3,
                 "max_level": 5,
                 "species": "SPECIES_GEODUDE"
               },
               {
-                "min_level": 5,
+                "min_level": 3,
                 "max_level": 5,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_ELECTRIKE"
+              },
+              {
+                "min_level": 3,
+                "max_level": 5,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 3,
+                "max_level": 5,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_GEODUDE_ALOLA"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_BALTOY"
               }
             ]
           }

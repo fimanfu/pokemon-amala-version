@@ -1,9 +1,9 @@
 {
-  "id": "MAP_DAMATRA_CHIEFS_CAVE_2F",
-  "name": "Damatra_ChiefsCave_2F",
-  "layout": "LAYOUT_DAMATRA_CHIEFS_CAVE_2F",
+  "id": "MAP_ICCEBUCUROU_UNDERGROUND_MARKET",
+  "name": "Iccebucurou_Underground_Market",
+  "layout": "LAYOUT_ICCEBUCUROU_UNDERGROUND_MARKET",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_AMALA_DAMATRA",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -14,15 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 5,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_DAMATRA_CHIEFS_CAVE",
-      "dest_warp_id": "1"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

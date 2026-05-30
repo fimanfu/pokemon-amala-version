@@ -21664,7 +21664,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .battleAnimScript = gBattleAnimMove_FireBlast,
+        .battleAnimScript = gBattleAnimMove_FusionFlare,
     },
 
     [MOVE_BUFUBARION] =
@@ -21719,7 +21719,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Ziobarion"),
         .description = COMPOUND_STRING(
-            "Severe Electric damage."),
+            "Severe Elec damage."),
         .effect = EFFECT_HIT,
         .power = 125,
         .type = TYPE_ELECTRIC,
@@ -21728,7 +21728,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .battleAnimScript = gBattleAnimMove_Thunder,
+        .battleAnimScript = gBattleAnimMove_FusionBolt,
     },
         
     [MOVE_TERABARION] =
@@ -21776,7 +21776,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .battleAnimScript = gBattleAnimMove_Psychic,
+        .battleAnimScript = gBattleAnimMove_ExpandingForce,
     },
 
     [MOVE_MEGIDOLAON] =
@@ -22097,6 +22097,362 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_InfernoOverdrive,
     },
 
+    [MOVE_AGI] =
+    {
+        .name = COMPOUND_STRING("Agi"),
+        .description = COMPOUND_STRING(
+            "Weak Fire damage."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Ember,
+    },
+
+    [MOVE_AGILAO] =
+    {
+        .name = COMPOUND_STRING("Agilao"),
+        .description = COMPOUND_STRING(
+            "Medium Fire damage."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_FlameBurst,
+    },
+
+    [MOVE_AGIDYNE] =
+    {
+        .name = COMPOUND_STRING("Agidyne"),
+        .description = COMPOUND_STRING(
+            "Heavy Fire damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_FireBlast,
+    },
+
+    [MOVE_BUFU] =
+    {
+        .name = COMPOUND_STRING("Bufu"),
+        .description = COMPOUND_STRING(
+            "Weak Ice damage."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_IceShard,
+    },
+
+    [MOVE_BUFULA] =
+    {
+        .name = COMPOUND_STRING("Bufula"),
+        .description = COMPOUND_STRING(
+            "Medium Ice damage."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_IcicleSpear,
+    },
+
+    [MOVE_BUFUDYNE] =
+    {
+        .name = COMPOUND_STRING("Bufudyne"),
+        .description = COMPOUND_STRING(
+            "Heavy Ice damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Blizzard,
+    },
+
+    [MOVE_ZAN] =
+    {
+        .name = COMPOUND_STRING("Zan"),
+        .description = COMPOUND_STRING(
+            "Weak Force damage."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_DragonRage,
+    },
+
+    [MOVE_ZANMA] =
+    {
+        .name = COMPOUND_STRING("Zanma"),
+        .description = COMPOUND_STRING(
+            "Medium Force damage."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_DragonBreath,
+    },
+
+    [MOVE_ZANDYNE] =
+    {
+        .name = COMPOUND_STRING("Zandyne"),
+        .description = COMPOUND_STRING(
+            "Heavy Force damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_DragonPulse,
+    },
+
+    [MOVE_GARU] =
+    {
+        .name = COMPOUND_STRING("Garu"),
+        .description = COMPOUND_STRING(
+            "Weak Wind damage."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Gust,
+    },
+
+    [MOVE_GARULA] =
+    {
+        .name = COMPOUND_STRING("Garula"),
+        .description = COMPOUND_STRING(
+            "Medium Wind damage."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_DualWingbeat,
+    },
+
+    [MOVE_GARUDYNE] =
+    {
+        .name = COMPOUND_STRING("Garudyne"),
+        .description = COMPOUND_STRING(
+            "Heavy Wind damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Hurricane,
+    },
+
+    [MOVE_TERA] =
+    {
+        .name = COMPOUND_STRING("Tera"),
+        .description = COMPOUND_STRING(
+            "Weak Earth damage."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_MudSlap,
+    },
+
+    [MOVE_TERAZI] =
+    {
+        .name = COMPOUND_STRING("Terazi"),
+        .description = COMPOUND_STRING(
+            "Medium Earth damage."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Magnitude,
+    },
+
+    [MOVE_TERADYNE] =
+    {
+        .name = COMPOUND_STRING("Teradyne"),
+        .description = COMPOUND_STRING(
+            "Heavy Earth damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_EarthPower,
+    },
+
+    [MOVE_ZIO] =
+    {
+        .name = COMPOUND_STRING("Zio"),
+        .description = COMPOUND_STRING(
+            "Weak Elec damage."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Spark,
+    },
+
+    [MOVE_ZIONGA] =
+    {
+        .name = COMPOUND_STRING("Zionga"),
+        .description = COMPOUND_STRING(
+            "Medium Elec damage."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_ElectroBall,
+    },
+
+    [MOVE_ZIODYNE] =
+    {
+        .name = COMPOUND_STRING("Ziodyne"),
+        .description = COMPOUND_STRING(
+            "Heavy Elec damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Thunder,
+    },
+
+    [MOVE_PSI] =
+    {
+        .name = COMPOUND_STRING("Psi"),
+        .description = COMPOUND_STRING(
+            "Weak Psy damage."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Confusion,
+    },
+
+    [MOVE_PSIO] =
+    {
+        .name = COMPOUND_STRING("Psio"),
+        .description = COMPOUND_STRING(
+            "Medium Psy damage."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 15,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Psychic,
+    },
+
+    [MOVE_PSIODYNE] =
+    {
+        .name = COMPOUND_STRING("Psiodyne"),
+        .description = COMPOUND_STRING(
+            "Heavy Psy damage."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .criticalHitStage = 2,
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_Psystrike,
+    },
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

@@ -1761,3 +1761,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/DamatraHouse_1/scripts.inc"
 
 	.include "data/maps/Damatra_ChiefsCave_2F/scripts.inc"
+
+	.include "data/maps/Phiye_WarGrounds/scripts.inc"
+
+	.include "data/maps/Agi_WarGrounds/scripts.inc"
+
+	.include "data/maps/Phiye_Tribe_Base/scripts.inc"
+
+	.include "data/maps/Iccebucurou_Underground_Market/scripts.inc"

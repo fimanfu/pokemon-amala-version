@@ -9367,8 +9367,8 @@
     {
       "id": "LAYOUT_ICCEBUCUROU_TOWN",
       "name": "Iccebucurou_Town_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 27,
+      "height": 27,
       "primary_tileset": "gTileset_DesertNew",
       "secondary_tileset": "gTileset_DesertTown",
       "border_filepath": "data/layouts/Iccebucurou_Town/border.bin",
@@ -9443,6 +9443,46 @@
       "secondary_tileset": "gTileset_CavesAltSecondary",
       "border_filepath": "data/layouts/Damatra_ChiefsCave_2F/border.bin",
       "blockdata_filepath": "data/layouts/Damatra_ChiefsCave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PHIYE_WAR_GROUNDS",
+      "name": "Phiye_WarGrounds_Layout",
+      "width": 38,
+      "height": 57,
+      "primary_tileset": "gTileset_DesertNew",
+      "secondary_tileset": "gTileset_DesertPyramid",
+      "border_filepath": "data/layouts/Phiye_WarGrounds/border.bin",
+      "blockdata_filepath": "data/layouts/Phiye_WarGrounds/map.bin"
+    },
+    {
+      "id": "LAYOUT_AGI_WAR_GROUNDS",
+      "name": "Agi_WarGrounds_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/Agi_WarGrounds/border.bin",
+      "blockdata_filepath": "data/layouts/Agi_WarGrounds/map.bin"
+    },
+    {
+      "id": "LAYOUT_PHIYE_TRIBE_BASE",
+      "name": "Phiye_Tribe_Base_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_DesertNew",
+      "secondary_tileset": "gTileset_DesertPyramid",
+      "border_filepath": "data/layouts/Phiye_Tribe_Base/border.bin",
+      "blockdata_filepath": "data/layouts/Phiye_Tribe_Base/map.bin"
+    },
+    {
+      "id": "LAYOUT_ICCEBUCUROU_UNDERGROUND_MARKET",
+      "name": "Iccebucurou_Underground_Market_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Iccebucurou_Underground_Market/border.bin",
+      "blockdata_filepath": "data/layouts/Iccebucurou_Underground_Market/map.bin"
     }
   ]
 }

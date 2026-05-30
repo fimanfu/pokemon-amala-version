@@ -8394,3 +8394,32 @@ BattleScript_CripplingBlow::
 	printfromtable gStatDownStringIds
 BattleScript_CripplingRet::
 	return
+
+BattleScript_AllureActivates::
+	call BattleScript_AbilityPopUp
+	volatileanimation BS_ATTACKER, VOLATILE_INFATUATION
+	printstring STRINGID_PKMNSXINFATUATEDY
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_TryDestinyKnotTarget
+	setstatchanger STAT_DEF, 2, TRUE
+	statbuffchange BS_TARGET, STAT_CHANGE_ALLOW_PTR, BattleScript_AllureEnd
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_AllureEnd
+	return
+
+BattleScript_DemonIsSmirking::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	statbuffchange BS_SCRIPTING, STAT_CHANGE_ALLOW_PTR, BattleScript_DemonIsSmirking_Cont
+	printstring STRINGID_SCRIPTINGSTATROSE
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_DemonIsSmirking_Cont:
+	clearsemiinvulnerablebit
+	return
+BattleScript_AffinityDrainNoSmirk::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNSXMADEYUSELESS
+	waitmessage B_WAIT_TIME_LONG
+	return

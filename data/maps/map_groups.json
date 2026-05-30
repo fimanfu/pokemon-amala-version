@@ -76,7 +76,8 @@
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
     "gMapGroup_AmalaTownsandRoutes",
-    "gMapGroup_Amala_IndoorDamatraVillage"
+    "gMapGroup_Amala_IndoorDamatraVillage",
+    "gMapGroup_Amala_IndoorIcce"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1168,7 +1169,10 @@
   "gMapGroup_AmalaTownsandRoutes": [
     "Damatra_Village",
     "First_Path",
-    "Iccebucurou_Town"
+    "Iccebucurou_Town",
+    "Phiye_WarGrounds",
+    "Agi_WarGrounds",
+    "Phiye_Tribe_Base"
   ],
   "gMapGroup_Amala_IndoorDamatraVillage": [
     "DamatraHouse_1",
@@ -1178,5 +1182,8 @@
     "Damatra_RivalHouse",
     "Damatra_ChiefsCave",
     "Damatra_ChiefsCave_2F"
+  ],
+  "gMapGroup_Amala_IndoorIcce": [
+    "Iccebucurou_Underground_Market"
   ]
 }

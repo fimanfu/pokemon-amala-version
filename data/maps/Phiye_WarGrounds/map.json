@@ -1,0 +1,36 @@
+{
+  "id": "MAP_PHIYE_WAR_GROUNDS",
+  "name": "Phiye_WarGrounds",
+  "layout": "LAYOUT_PHIYE_WAR_GROUNDS",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ICCEBUCUROU_TOWN",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_AGI_WAR_GROUNDS",
+      "offset": 14,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_PHIYE_TRIBE_BASE",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}
